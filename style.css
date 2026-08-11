@@ -146,9 +146,8 @@ button {
 }
 
 .logo-icon {
-    
-    width: 100px;
-    height: 50px;
+    max-height: 50px;
+    width: auto;
     filter: invert(1);
 }
 
