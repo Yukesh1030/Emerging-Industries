@@ -54,9 +54,9 @@
 
     <!-- Featured Article Section -->
     <section class="container section-padding" style="margin-top: 6rem; margin-bottom: 2rem;" data-aos="fade-up" data-aos-duration="1000">
-        <div class="featured-article-container" style="position: relative; display: flex; justify-content: flex-start; min-height: 550px;">
-            <img src="assets/unsplash_-NEpWXP7iH4.webp" alt="Featured Article" style="width: 75%; height: 500px; object-fit: cover; border: 1px solid #000;">
-            <div class="featured-article-card" style="position: absolute; right: 0; bottom: 0; background: #dcdcdc; padding: 3.5rem; width: 45%; border: 1px solid #000; box-shadow: none;">
+        <div class="featured-article-container" class="featured-article-wrapper">
+            <img src="assets/unsplash_-NEpWXP7iH4.webp" alt="Featured Article" class="featured-article-img-new">
+            <div class="featured-article-card" class="featured-article-card">
                 <p class="category-tag" style="margin-bottom: 1.5rem;"><span style="color: var(--orange); font-size: 1.1rem; font-weight: 600;">NEWS</span> <span style="color: #111; margin-left: 5px; font-weight: 500; font-size: 1.1rem;">NOV 10, 2023</span></p>
                 <h3 style="font-family: 'Josefin Sans', sans-serif; font-size: 2.2rem; font-weight: 700; color: #000; margin-bottom: 1.5rem; line-height: 1.2;">Metallurgy unveiled: Science behind stronger materials</h3>
                 <p style="color: #111; margin-bottom: 2.5rem; line-height: 1.8; font-size: 1.1rem;">Discover how recent breakthroughs in nanotechnology are allowing engineers to create lightweight alloys with unprecedented tensile strength, transforming modern construction and aerospace industries.</p>
@@ -67,8 +67,8 @@
 
     <!-- Newsletter Banner -->
     <section class="container" style="margin-bottom: 6rem; margin-top: 4rem;" data-aos="fade-up" data-aos-duration="1000">
-        <div class="newsletter-banner" style="background-color: #000; display: flex; align-items: stretch; border-radius: 24px; overflow: hidden; padding: 0;">
-            <div class="newsletter-text" style="padding: 5rem 4rem; color: #fff; flex: 1.3; display: flex; flex-direction: column; justify-content: center;">
+        <div class="newsletter-banner-new">
+            <div class="newsletter-text-new">
                 <h2 style="font-family: 'Josefin Sans', sans-serif; font-size: 3.5rem; margin-bottom: 2rem; font-weight: 500; line-height: 1.1;">Subscribe to our<br>weekly newseletter</h2>
                 <p style="margin-bottom: 3.5rem; opacity: 1; line-height: 1.8; font-size: 1.1rem; letter-spacing: 0.5px;">Get the latest industry reports, market analysis,<br>and technological advancements in metallurgy delivered<br>straight to your inbox every week.</p>
                 <form class="footer-form page-contact-form" style="max-width: 350px; height: 42px; display: flex; margin: 2; background: #fff; border-radius: 40px; padding: 2px; border: 1.5px solid #000; align-items: stretch; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -76,7 +76,7 @@
                     <button type="submit" class="btn-submit-orange" style="border-radius: 40px; padding: 0 20px; border: 1px solid #000; margin: 0; cursor: pointer; font-size: 0.85rem; font-family: 'Josefin Sans', sans-serif; background-color: var(--orange); color: #fff; font-weight: 500;">Subscribe</button>
                 </form>
             </div>
-            <div class="newsletter-img" style="flex: 1; padding: 2rem 2rem 2rem 0; display: flex; align-items: stretch;">
+            <div class="newsletter-img-new">
                 <img src="assets/unsplash_Bd7gNnWJBkU.webp" alt="Laptop" style="width: 100%; height: 100%; min-height: 400px; object-fit: cover; border-radius: 20px;">
             </div>
         </div>
@@ -84,7 +84,7 @@
 
     <!-- Latest Articles Grid -->
     <section class="container section-padding" style="margin-bottom: 4rem;" data-aos="fade-up" data-aos-duration="1000">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem;">
+        <div class="blog-latest-header">
             <h2 style="font-family: 'Josefin Sans', sans-serif; font-size: 3.5rem; font-weight: 600;">Latest articles</h2>
             <div class="article-filters" style="display: flex; gap: 2rem; font-weight: 600; font-size: 0.95rem;">
                 <a href="#" style="color: #000; text-decoration: none;">All</a>
@@ -94,7 +94,7 @@
             </div>
         </div>
         
-        <div class="articles-grid" style="grid-template-columns: repeat(3, 1fr); gap: 4rem 2.5rem;">
+        <div class="articles-grid-new">
             <!-- Article 1 -->
             <div class="article-card">
                 <p class="category-tag" style="color: #000; text-transform: uppercase; font-weight: 600; font-size: 1rem; margin-bottom: 1.5rem;">NEWS</p>
@@ -153,7 +153,7 @@
 
     <!-- Featured Experts Section (New) -->
     <section class="section-grey section-padding" data-aos="fade-up" style="margin-top: 5rem;">
-        <div class="container" style="display: flex; flex-direction: row; gap: 4rem; align-items: center;">
+        <div class="container" class="flex-row-mobile-stack">
             <div style="flex: 1;">
                 <img src="assets/blog_experts.webp" alt="Featured Experts" style="width: 100%; height: 450px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
             </div>
@@ -171,7 +171,7 @@
         <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
             <img src="assets/blog_webinars.webp" alt="Upcoming Webinars" style="width: 100%; height: 400px; object-fit: cover;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(11,19,43,0.9) 0%, rgba(11,19,43,0.4) 100%); display: flex; align-items: center;">
-                <div style="padding: 4rem;">
+                <div class="webinar-text-box">
                     <span style="display: inline-block; padding: 5px 15px; background: var(--orange); color: #fff; border-radius: 20px; font-weight: 600; font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 1px;">LIVE EVENT</span>
                     <h2 style="font-family: 'Josefin Sans', sans-serif; font-size: 2.8rem; margin-bottom: 1rem; color: #fff;">Upcoming Webinars</h2>
                     <p style="font-size: 1.1rem; line-height: 1.6; color: #eee; max-width: 500px; margin-bottom: 2rem;">Join our monthly interactive sessions. Next up: "Advanced Stress Testing for Aerospace Alloys" – Register for free today.</p>
@@ -185,7 +185,7 @@
     <section class="section-grey section-padding" data-aos="fade-up" style="margin-top: 5rem; padding-bottom: 5rem;">
         <div class="container text-center">
             <h2 style="font-family: 'Josefin Sans', sans-serif; font-size: 2.8rem; margin-bottom: 3rem;">Popular <span style="color: var(--orange);">Topics</span></h2>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+            <div class="topics-grid-new">
                 <div style="background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                     <h4 style="color: var(--navy); font-family: 'Josefin Sans', sans-serif;">Aerospace</h4>
                     <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">42 Articles</p>
