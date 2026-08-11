@@ -146,7 +146,7 @@ button {
 }
 
 .logo-icon {
-    max-height: 50px;
+    max-height: 30px;
     width: auto;
 }
 
@@ -2840,5 +2840,16 @@ html, body {
     }
     .footer-top h2 {
         text-align: center !important;
+    }
+}
+
+/* CSS to fix mobile footer form radius */
+@media (max-width: 768px) {
+    .footer-form input,
+    .footer-form .btn-subscribe,
+    .banner-form input,
+    .banner-form .btn-subscribe {
+        border-radius: 20px !important;
+        width: 100% !important;
     }
 }
