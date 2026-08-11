@@ -2762,3 +2762,83 @@ html, body {
         height: 300px !important;
     }
 }
+
+/* CSS For Buttons Mobile Alignment */
+@media (max-width: 768px) {
+    .intro-actions,
+    .process-actions,
+    .footer-top-actions,
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        margin-top: 1.5rem !important;
+        width: 100% !important;
+    }
+
+    .intro-actions button,
+    .process-actions button,
+    .footer-top-actions button,
+    .hero-buttons button,
+    .hero-buttons a {
+        width: 100% !important;
+        max-width: 250px !important;
+        margin: 0 !important;
+    }
+}
+
+/* CSS For Footer Mobile Center Alignment */
+@media (max-width: 768px) {
+    .footer-new {
+        text-align: center !important;
+    }
+    .footer-main-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+    }
+    .footer-links-section, .footer-utility-section, .footer-newsletter-section {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .links-columns {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    .footer-list {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .footer-list li {
+        text-align: center !important;
+    }
+    .footer-form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+    .footer-socials {
+        justify-content: center !important;
+        width: 100% !important;
+        display: flex !important;
+    }
+    .footer-top {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .footer-top h2 {
+        text-align: center !important;
+    }
+}
