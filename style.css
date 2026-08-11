@@ -148,8 +148,6 @@ button {
 .logo-icon {
     max-height: 50px;
     width: auto;
-    filter: hue-rotate(195deg) brightness(1.5) saturate(2);
-    mix-blend-mode: screen;
 }
 
 .nav-links {
@@ -2420,5 +2418,347 @@ select.auth-input-select option {
 @media (max-width: 480px) {
     .service-hero h1 {
         font-size: 2.5rem;
+    }
+}
+
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS FOR NEW PAGES (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Grid Flattening */
+    .contact-info-grid, 
+    .faq-grid, 
+    .locations-grid, 
+    .social-huge-grid, 
+    .articles-grid, 
+    .brands-grid, 
+    .values-grid, 
+    .team-grid, 
+    .service-info-grid,
+    .service-split-grid,
+    .more-services-header,
+    .services-list-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* 2. Flex Direction Flipping */
+    .contact-box-dark, 
+    .featured-article-container, 
+    .auth-container, 
+    .about-hero-bottom, 
+    .story-container,
+    .location-top-bar,
+    .stats-strip,
+    .auth-social-group {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 2rem !important;
+    }
+
+    /* 3. Typography & Spacing */
+    .page-hero {
+        height: auto !important;
+        min-height: 300px !important;
+        padding-top: 100px !important;
+        padding-bottom: 2rem !important;
+        text-align: center !important;
+    }
+    
+    .page-hero h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .social-huge {
+        font-size: 3rem !important;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+    /* 4. Fix specific overlays and images */
+    .location-card-overlay,
+    .testimonial-card,
+    .story-card-overlay {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        margin: -30px auto 0 !important;
+        width: 90% !important;
+        max-width: 100% !important;
+        padding: 1.5rem !important;
+        text-align: center !important;
+    }
+
+    .story-image,
+    .featured-article-img,
+    .service-split-img {
+        width: 100% !important;
+    }
+    
+    .story-image img, 
+    .featured-article-img img,
+    .service-split-img img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Flex widths override */
+    .page-contact-form,
+    .contact-box-info,
+    .auth-left, 
+    .auth-right,
+    .story-content {
+        flex: none !important;
+        width: 100% !important;
+        padding: 1rem !important;
+    }
+
+    .contact-box-dark {
+        padding: 1.5rem !important;
+    }
+
+    .about-hero-buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .about-hero-buttons .btn {
+        width: 100% !important;
+    }
+
+    .location-tabs {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+    }
+
+    .location-btn {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    .stats-numbers-wrapper {
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    .stats-strip h2 {
+        font-size: 2rem !important;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .brands-grid img {
+        margin: 0 auto !important;
+    }
+}
+
+/* ==========================================================================
+   DESKTOP STYLES FOR INDEX.HTML NEW SECTIONS
+   ========================================================================== */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Common Highlights */
+.highlight-text {
+    color: var(--orange);
+}
+
+/* Safety Section */
+.safety-section {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+}
+.safety-img-container {
+    flex: 1;
+}
+.safety-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.safety-content {
+    flex: 1;
+}
+.safety-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+.safety-content p {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.safety-list {
+    list-style: none;
+    padding: 0;
+}
+.safety-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.list-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+}
+
+/* Supply Chain Section */
+.supply-chain-section {
+    margin-top: 5rem;
+}
+.supply-chain-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+.supply-desc {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.supply-img-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.supply-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.supply-overlay {
+    position: absolute;
+    bottom: -30px;
+    right: 40px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    max-width: 300px;
+}
+.supply-overlay h4 {
+    color: var(--orange);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+/* Case Study Section */
+.case-study-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4rem;
+    align-items: center;
+}
+.case-img-container {
+    flex: 1;
+}
+.case-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.case-content {
+    flex: 1;
+}
+.case-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #eee;
+    color: var(--navy);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+.case-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+.case-content p {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS OVERRIDES FOR INDEX.HTML NEW SECTIONS (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .safety-section,
+    .case-study-section {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+
+    .safety-content h2,
+    .supply-chain-section h2,
+    .case-content h2 {
+        font-size: 2rem !important;
+    }
+
+    .safety-img-container,
+    .safety-content,
+    .case-img-container,
+    .case-content {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    .safety-img,
+    .case-img {
+        height: auto !important;
+    }
+
+    .safety-list li {
+        justify-content: center !important;
+    }
+
+    .supply-overlay {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        margin: -30px auto 0 auto !important;
+        width: 90% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .supply-img {
+        height: 300px !important;
     }
 }
