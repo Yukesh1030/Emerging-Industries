@@ -148,7 +148,7 @@ button {
 .logo-icon {
     max-height: 50px;
     width: auto;
-    filter: invert(1);
+    mix-blend-mode: screen;
 }
 
 .nav-links {
