@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found - EMERGE-X</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        .error-container {
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 6rem;
+            color: var(--accent);
+            margin: 0;
+            line-height: 1;
+            font-weight: 800;
+        }
+        h2 {
+            font-size: 2rem;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+        p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), #1a9658);
+            color: #0b1514;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(39, 209, 127, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>The feature or page you are looking for is currently under construction or does not exist.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; margin-top: 20px;">
+            <a href="javascript:history.back()" class="back-btn" style="background: transparent; border: 1px solid var(--accent); color: var(--accent);">Go Back</a>
+            <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

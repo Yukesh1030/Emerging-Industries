@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard - EMERGE-X</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button class="close-sidebar-btn" onclick="document.querySelector('.sidebar').classList.remove('show')" style="background:none; border:none; color:white; font-size:1.5rem; position:absolute; top:20px; right:20px; display:none;">✕</button>
+        <div class="sidebar-header" style="justify-content: center;">
+            <img src="assets/Brand-logo.webp" alt="Emerge-X" style="max-height: 40px;">
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li onclick="window.location.href='ClientDashboard.html'">Dashboard</li>
+            <li onclick="window.location.href='ClientExplore.html'">Explore Industries</li>
+            <li onclick="window.location.href='ClientInsights.html'">Market Insights</li>
+            <li onclick="window.location.href='ClientPortfolio.html'">My Portfolio</li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li class="active" onclick="window.location.href='ClientAccount.html'">Account Setup</li>
+            <li onclick="window.location.href='ClientFeedback.html'">Feedback</li>
+        </ul>
+
+        <button class="logout-btn" onclick="window.location.href='login.html'">↪ Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <img src="assets/Brand-logo.webp" alt="Emerge-X" class="mobile-brand-logo" style="max-height: 36px; object-fit: contain;">
+        <button class="mobile-menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+    </div>
+
+        <div class="overview-header">
+            <div class="overview-titles">
+                <h1>ACCOUNT SETUP</h1>
+                <p>Here is the summary of your portfolio</p>
+            </div>
+            <div class="user-profile-header">
+                <div class="user-avatar" id="userAvatar">Y</div>
+                <div class="user-info">
+                    <div class="user-email" id="userEmailDisplay">yukeshyuki18@gmail.com</div>
+                    <div class="user-role" id="userRoleDisplay">System Admin</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="charts-grid" data-aos="fade-up">
+            <div class="chart-card full-width gsap-stagger">
+                <div class="chart-header">
+                    <h3>Profile Configuration</h3>
+                </div>
+                <form style="display:flex; flex-direction:column; gap:20px; max-width: 500px;">
+                    <div>
+                        <label style="display:block; margin-bottom:8px; color:var(--text-muted);">First Name</label>
+                        <input type="text" class="sidebar-search" value="Yukesh" style="width:100%; margin:0;" required>
+                    </div>
+                    <div>
+                        <label style="display:block; margin-bottom:8px; color:var(--text-muted);">Email Address</label>
+                        <input type="email" class="sidebar-search" value="yukeshyuki18@gmail.com" style="width:100%; margin:0;" required>
+                    </div>
+                    <div>
+                        <label style="display:block; margin-bottom:8px; color:var(--text-muted);">Investment Risk Profile</label>
+                        <select class="sidebar-search" style="width:100%; margin:0; background: rgba(255,255,255,0.05); color:white; border:none; padding:10px; border-radius:8px;" required>
+                            <option>Conservative</option>
+                            <option selected>Moderate</option>
+                            <option>Aggressive</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="filter-btn" style="background:var(--kpi-grad-start); border-color:var(--kpi-grad-start); width:200px;">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- 1. Linked Accounts -->
+        <div class="charts-grid" style="margin-top: 32px;" data-aos="fade-up">
+            <div class="chart-card gsap-stagger">
+                <div class="chart-header">
+                    <h3>Linked Bank Accounts</h3>
+                </div>
+                <div class="inner-card" style="display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                        <div style="font-weight:600; color:white;">Chase Checking</div>
+                        <div style="font-size:0.9rem; color:var(--text-muted);">**** 4582</div>
+                    </div>
+                    <span class="badge-active">Verified</span>
+                </div>
+                <form style="display:inline;"><button type="submit" class="filter-btn" style="margin-top:12px;">+ Link New Bank</button></form>
+            </div>
+        </div>
+
+        <!-- 2. Subscription Plan -->
+        <div class="kpi-grid" style="margin-top: 32px;">
+            <div class="kpi-card gsap-stagger" data-aos="fade-up">
+                <div class="kpi-title">Current Plan</div>
+                <div class="kpi-value" style="color:var(--accent);">Pro Investor</div>
+                <div class="kpi-trend">$29/month</div>
+                <form style="display:inline;"><button type="submit" class="kpi-action" style="background:none; border:none; padding:0; cursor:pointer; margin-top:12px;">Upgrade to Elite ></button></form>
+            </div>
+        </div>
+
+        <!-- 3. Login History -->
+        <div class="charts-grid" style="margin-top: 32px;" data-aos="fade-up">
+            <div class="chart-card full-width gsap-stagger">
+                <div class="chart-header">
+                    <h3>Recent Login Activity</h3>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Device</th>
+                            <th>Location</th>
+                            <th>IP Address</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MacBook Pro (Chrome)</td>
+                            <td>New York, USA</td>
+                            <td>192.168.1.1</td>
+                            <td>Just now</td>
+                        </tr>
+                        <tr>
+                            <td>iPhone 14 Pro (Safari)</td>
+                            <td>New York, USA</td>
+                            <td>10.0.0.45</td>
+                            <td>2 days ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 4. Notification Preferences -->
+        <div class="charts-grid" style="margin-top: 32px;" data-aos="fade-up">
+            <div class="chart-card gsap-stagger">
+                <div class="chart-header">
+                    <h3>Notifications</h3>
+                </div>
+                <form style="display:flex; flex-direction:column; gap:12px;">
+                    <label style="display:flex; align-items:center; gap:12px; color:white;">
+                        <input type="checkbox" checked style="accent-color:var(--accent);"> Email alerts for portfolio drops > 5%
+                    </label>
+                    <label style="display:flex; align-items:center; gap:12px; color:white;">
+                        <input type="checkbox" checked style="accent-color:var(--accent);"> Weekly market summary
+                    </label>
+                    <label style="display:flex; align-items:center; gap:12px; color:white;">
+                        <input type="checkbox" style="accent-color:var(--accent);"> SMS notifications for executed trades
+                    </label>
+                    <button type="submit" class="filter-btn" style="margin-top:16px; background:var(--kpi-grad-start); border-color:var(--kpi-grad-start);">Save Preferences</button>
+                </form>
+            </div>
+        </div>
+
+</main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

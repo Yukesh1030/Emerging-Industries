@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - STACKLY</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button class="close-sidebar-btn" onclick="document.querySelector('.sidebar').classList.remove('show')" style="background:none; border:none; color:white; font-size:1.5rem; position:absolute; top:20px; right:20px; display:none;">✕</button>
+        <div class="sidebar-header" style="justify-content: center;">
+            <img src="assets/Brand-logo.webp" alt="Emerge-X" style="max-height: 40px;">
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li onclick="window.location.href='AdminDashboard.html'">Dashboard</li>
+            <li onclick="window.location.href='AdminIndustries.html'">Industries</li>
+            <li onclick="window.location.href='AdminCompanies.html'">Companies</li>
+            <li class="active" onclick="window.location.href='AdminInvestments.html'">Investments</li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li onclick="window.location.href='AdminIntelligence.html'">Intelligence</li>
+            <li onclick="window.location.href='AdminUsers.html'">Users & Clients</li>
+            <li onclick="window.location.href='AdminSettings.html'">Settings</li>
+        </ul>
+
+        <button class="logout-btn" onclick="window.location.href='login.html'">↪ Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <img src="assets/Brand-logo.webp" alt="Emerge-X" class="mobile-brand-logo" style="max-height: 36px; object-fit: contain;">
+        <button class="mobile-menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+    </div>
+
+        <div class="overview-header">
+            <div class="overview-titles">
+                <h1>INVESTMENTS</h1>
+                <p>Here is the summary of overall data</p>
+            </div>
+            <div class="user-profile-header">
+                <div class="user-avatar" id="userAvatar">Y</div>
+                <div class="user-info">
+                    <div class="user-email" id="userEmailDisplay">yukeshyuki18@gmail.com</div>
+                    <div class="user-role" id="userRoleDisplay">System Admin</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="kpi-grid">
+            <div class="kpi-card gsap-stagger" data-aos="fade-right">
+                <div class="kpi-title">Total Capital Deployed</div>
+                <div class="kpi-value">$428.5M</div>
+            </div>
+            <div class="kpi-card gsap-stagger" data-aos="fade-left">
+                <div class="kpi-title">Active Deals</div>
+                <div class="kpi-value">34</div>
+            </div>
+        </div>
+
+        <div class="charts-grid" data-aos="fade-up">
+            <div class="chart-card full-width">
+                <div class="chart-header">
+                    <h3>Investment Cash Flow</h3>
+                </div>
+                <div class="chart-container">
+                    <canvas id="marketGrowthChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Additional Section: Top Investors & Pipeline -->
+        <div class="charts-grid" style="margin-top: 32px;">
+            <div class="chart-card full-width gsap-stagger" data-aos="fade-up">
+                <div class="chart-header" style="margin-bottom: 12px;">
+                    <h3 style="color:var(--accent);">Active Investment Pipeline</h3>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Target Company</th>
+                            <th>Sector</th>
+                            <th>Proposed Amount</th>
+                            <th>Stage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>QuantumLeap AI</td>
+                            <td>Artificial Intelligence</td>
+                            <td style="color:var(--accent); font-weight:600;">$25.0M</td>
+                            <td class="badge-review">Due Diligence</td>
+                        </tr>
+                        <tr>
+                            <td>EcoBattery Inc</td>
+                            <td>Clean Energy</td>
+                            <td style="color:var(--accent); font-weight:600;">$18.5M</td>
+                            <td class="badge-review">Term Sheet</td>
+                        </tr>
+                        <tr>
+                            <td>MediGen</td>
+                            <td>Biotechnology</td>
+                            <td style="color:var(--accent); font-weight:600;">$32.0M</td>
+                            <td class="badge-active">Closing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+</main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

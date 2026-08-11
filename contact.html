@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerging Industries</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/Brand-logo.webp" alt="Logo" class="logo-icon"> 
+                
+            </div>
+            <!-- Hamburger Icon -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="nav-menu" style="flex: 1; justify-content: center;">
+                <ul class="nav-links" style="margin: 0 auto;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">service</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                    <button class="btn-join" onclick="window.location.href='signup.html'">Join</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Contact Hero Section -->
+    <section class="page-hero" style="background-image: url('assets/unsplash_u13zBF4r56A.webp'); background-size: cover; background-position: center; min-height: 550px; display: flex; align-items: center;" data-aos="fade-in">
+        <div class="container text-center">
+            <h1 style="font-family: 'Josefin Sans', sans-serif; font-weight: 800; font-size: 3.5rem; color: #000; margin-bottom: 2rem;">CONTACT US TO<br>REQUEST A QUOTE</h1>
+            <p style="max-width: 900px; margin: 0 auto; color: #000; font-size: 1.1rem; line-height: 1.6; font-weight: 500;">
+                Reach out to our engineering team to discuss your customized metal fabrication needs. We provide <br>detailed project assessments and accurate quotes tailored to your specific industrial requirements.<br>
+                From rapid prototyping to mass production, our experts are ready to guide you through<br>
+                every step of the manufacturing process with precision and reliability.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="container" style="margin-top: 60px; position: relative; z-index: 10; margin-bottom: 6rem;" data-aos="fade-up">
+        <div style="display: flex; gap: 4rem; align-items: center; justify-content: space-between;">
+            <!-- Dark Form Box -->
+            <div style="background: #0d1f1b; border-radius: 20px; padding: 3rem; flex: 1.2; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <form class="contact-cyan-form page-contact-form" style="margin: 0; box-shadow: none;">
+                    <div class="form-row" style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label style="color: #fff; font-family: 'Josefin Sans', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; display: block;">Full name</label>
+                            <input type="text" placeholder="John Carter" required style="width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; font-family: var(--font-body); font-size: 0.9rem;">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label style="color: #fff; font-family: 'Josefin Sans', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; display: block;">Phone number</label>
+                            <input type="text" placeholder="(123) 456 - 7890" required style="width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; font-family: var(--font-body); font-size: 0.9rem;">
+                        </div>
+                    </div>
+                    <div class="form-row" style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label style="color: #fff; font-family: 'Josefin Sans', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; display: block;">Email address</label>
+                            <input type="email" placeholder="example@youremail.com" required style="width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; font-family: var(--font-body); font-size: 0.9rem;">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label style="color: #fff; font-family: 'Josefin Sans', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; display: block;">Subject</label>
+                            <input type="text" placeholder="Ex - Metal testing" required style="width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; font-family: var(--font-body); font-size: 0.9rem;">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label style="color: #fff; font-family: 'Josefin Sans', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; display: block;">Message</label>
+                        <textarea placeholder="Ex - Metal testing" required style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; font-family: var(--font-body); font-size: 0.9rem; min-height: 120px; resize: none;"></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn-submit-orange" style="background-color: var(--orange); color: #fff; padding: 10px 40px; border-radius: 30px; border: none; font-size: 1rem; font-family: 'Josefin Sans', sans-serif; font-weight: 500; cursor: pointer;">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Right Info Text -->
+            <div style="flex: 1;">
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; margin-bottom: 3rem;">
+                    Our business hours are Monday through Friday, 8am to 6pm EST.<br>
+                    We provide exceptional customer service and rapid response times.<br>
+                    Connect with our dedicated support team today.<br>
+                    We look forward to working with you on your next project.
+                </p>
+                <div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center; text-align: center; border-bottom: 1px solid #000; padding-bottom: 2rem; margin-bottom: 2rem;">
+                    <div style="flex: 1; border-right: 1px solid #ccc; padding-right: 1rem;">
+                        <img src="assets/location.webp" alt="Location" style="width: 32px; margin-bottom: 1rem; filter: invert(1);">
+                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Our location</h4>
+                        <p style="font-size: 0.9rem; color: #444; line-height: 1.5;">6 MetroTech Center,<br>Brooklyn, NY 11201, EE. UU.</p>
+                    </div>
+                    <div style="flex: 1; padding-left: 1rem;">
+                        <img src="assets/call.webp" alt="Phone" style="width: 32px; margin-bottom: 1rem; filter: invert(1);">
+                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Contact us</h4>
+                        <p style="font-size: 0.9rem; color: #444; line-height: 1.5; margin-bottom: 0.5rem;">Email: contact@industrial.com</p>
+                        <p style="font-size: 0.9rem; color: #444;">Phone: (123) 456-789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Our Location Section -->
+    <section class="container section-padding" data-aos="fade-up" style="margin-top: 4rem;">
+        <h2 style="font-family: 'Josefin Sans', sans-serif; font-size: 3rem; font-weight: 500; margin-bottom: 1.5rem;">Visit our location</h2>
+        <p style="max-width: 600px; margin-bottom: 4rem; line-height: 1.6; color: #000; font-family: 'Josefin Sans', sans-serif; font-size: 1rem; font-weight: 600;">
+            Schedule an in-person meeting at our primary processing facility.<br>Experience our state-of-the-art machinery and meet the engineering team.
+        </p>
+        
+        <div style="position: relative; margin-bottom: 4rem; display: flex; flex-direction: column;">
+            <div style="width: 100%; display: flex; justify-content: flex-end;">
+                <img src="assets/image 101.webp" alt="Factory Worker" style="width: 95%; max-height: 600px; object-fit: cover;">
+            </div>
+            
+            <div style="position: absolute; bottom: -40px; left: 0; background-color: #e5e5e5; padding: 4rem 3rem; width: 60%; border: 1px solid #999;">
+                <h3 style="font-family: 'Josefin Sans', sans-serif; font-size: 2.5rem; font-weight: 900; color: #000; margin-bottom: 1.5rem; text-transform: uppercase;">PITTSBURGH, PA</h3>
+                <p style="font-size: 1rem; line-height: 1.6; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; margin-bottom: 3rem;">
+                    Our primary processing and research facility, equipped with<br>advanced metallurgical testing laboratories and massive foundries.
+                </p>
+                <div style="display: flex; gap: 2rem; align-items: flex-start; text-align: center;">
+                    <div style="flex: 1; border-right: 1.5px solid #000; padding-right: 1rem;">
+                        <img src="assets/location.webp" alt="Location" style="width: 32px; margin-bottom: 1rem; filter: invert(1);">
+                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--orange); margin-bottom: 1rem;">Our location</h4>
+                        <p style="font-size: 0.9rem; color: #f25f22; line-height: 1.5;">6 MetroTech Center,<br>Brooklyn, NY 11201, EE. UU.</p>
+                    </div>
+                    <div style="flex: 1; padding-left: 1rem;">
+                        <img src="assets/call.webp" alt="Phone" style="width: 32px; margin-bottom: 1rem; filter: invert(1);">
+                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--orange); margin-bottom: 1rem;">Contact us</h4>
+                        <p style="font-size: 0.9rem; color: #f25f22; line-height: 1.5; margin-bottom: 0.5rem;">Email: contact@industrial.com</p>
+                        <p style="font-size: 0.9rem; color: #f25f22;">Phone: (123) 456-789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" data-aos="fade-up" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 5rem;">
+                <h2 style="font-family: 'Josefin Sans', sans-serif; font-size: 3rem; font-weight: 500; margin-bottom: 1.5rem;">Frequently asked questions</h2>
+                <p style="max-width: 600px; margin: 0 auto; color: #000; font-family: 'Josefin Sans', sans-serif; font-size: 1rem; font-weight: 600; line-height: 1.6;">
+                    Find quick answers to common questions about our capabilities,<br>international shipping processes, and consultation services.
+                </p>
+            </div>
+            <div class="faq-list" style="display: flex; flex-direction: column;">
+                <!-- FAQ Item 1 -->
+                <div class="gsap-faq-item" style="display: flex; padding: 2.5rem 0; border-bottom: 1.5px solid #000;">
+                    <div style="flex: 1; padding-right: 2rem;">
+                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #000; line-height: 1.4;">Do you offer international shipping<br>for metallurgical products?</h4>
+                    </div>
+                    <div style="flex: 1; display: flex; align-items: center;">
+                        <p style="font-size: 0.95rem; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; line-height: 1.6; margin: 0;">Mattis elit aliquet pellentesque aliquet et adipiscing semper ut<br>pharetra pellentesque ut mauris massa erat eget nunc nibh nunc.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="gsap-faq-item" style="display: flex; padding: 2.5rem 0; border-bottom: 1.5px solid #000;">
+                    <div style="flex: 1; padding-right: 2rem;">
+                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #000; line-height: 1.4;">How can I learn more about<br>Industrial X sustainability efforts?</h4>
+                    </div>
+                    <div style="flex: 1; display: flex; align-items: center;">
+                        <p style="font-size: 0.95rem; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; line-height: 1.6; margin: 0;">A mauris mauris facilisi morbi dui lobortis sed malesuada quam<br>ultrices vitae augue imperdiet pellentesque aliquam mi cursus sit.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="gsap-faq-item" style="display: flex; padding: 2.5rem 0; border-bottom: 1.5px solid #000;">
+                    <div style="flex: 1; padding-right: 2rem;">
+                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #000; line-height: 1.4;">Can I schedule a facility tour or<br>arrange a meeting with your team?</h4>
+                    </div>
+                    <div style="flex: 1; display: flex; align-items: center;">
+                        <p style="font-size: 0.95rem; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; line-height: 1.6; margin: 0;">Nunc adipiscing fames est elementum ac sem donec enim<br>lectus vitae sed in dolor cursus porta id elit lectus tincidunt</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="gsap-faq-item" style="display: flex; padding: 2.5rem 0; border-bottom: 1.5px solid #000;">
+                    <div style="flex: 1; padding-right: 2rem;">
+                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #000; line-height: 1.4;">Do you provide metallurgy<br>consulting services?</h4>
+                    </div>
+                    <div style="flex: 1; display: flex; align-items: center;">
+                        <p style="font-size: 0.95rem; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; line-height: 1.6; margin: 0;">Mattis elit aliquet pellentesque aliquet et adipiscing semper ut<br>pharetra pellentesque ut mauris massa erat eget nunc nibh nunc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Grid -->
+    <section class="container section-padding" data-aos="fade-up" style="margin-bottom: 4rem;">
+        <div class="locations-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; text-align: center;">
+            <div class="location-col gsap-location-card">
+                <img src="assets/image 102.webp" alt="Pittsburgh" style="width: 100%; height: 450px; object-fit: cover; margin-bottom: 2rem;">
+                <h4 style="color: #f25f22; font-family: 'Josefin Sans', sans-serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem;">Pittsburgh, PA</h4>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.95rem; font-weight: 600; color: #000; line-height: 1.6; margin-bottom: 2rem; padding: 0 1rem;">Non lectus vestibulum egestas urna sit felis purus massa. Facilisis egestas.</p>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: #000; margin-bottom: 0.5rem; text-align: left;">Email: <span style="color: #666; font-weight: 400;">pittsburgh@industrial.com</span></p>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: #000; text-align: left;">Phone: <span style="color: #666; font-weight: 400;">(123) 456-789</span></p>
+            </div>
+            <div class="location-col gsap-location-card">
+                <img src="assets/image 103.webp" alt="Cleveland" style="width: 100%; height: 450px; object-fit: cover; margin-bottom: 2rem;">
+                <h4 style="color: #f25f22; font-family: 'Josefin Sans', sans-serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem;">Cleveland, OH</h4>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.95rem; font-weight: 600; color: #000; line-height: 1.6; margin-bottom: 2rem; padding: 0 1rem;">Non lectus vestibulum egestas urna sit felis purus massa. Facilisis egestas.</p>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: #000; margin-bottom: 0.5rem; text-align: left;">Email: <span style="color: #666; font-weight: 400;">cleveland@industrial.com</span></p>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: #000; text-align: left;">Phone: <span style="color: #666; font-weight: 400;">(123) 987-654</span></p>
+            </div>
+            <div class="location-col gsap-location-card">
+                <img src="assets/image 104.webp" alt="Birmingham" style="width: 100%; height: 450px; object-fit: cover; margin-bottom: 2rem;">
+                <h4 style="color: #f25f22; font-family: 'Josefin Sans', sans-serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem;">Birmingham, AL</h4>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.95rem; font-weight: 600; color: #000; line-height: 1.6; margin-bottom: 2rem; padding: 0 1rem;">Non lectus vestibulum egestas urna sit felis purus massa. Facilisis egestas.</p>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: #000; margin-bottom: 0.5rem; text-align: left;">Email: <span style="color: #666; font-weight: 400;">birmingham@industrial.com</span></p>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: #000; text-align: left;">Phone: <span style="color: #666; font-weight: 400;">(123) 456-789</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow Socials -->
+    <section class="container section-padding text-center" data-aos="fade-up" style="padding: 6rem;">
+        <h2>Follow us on social media</h2>
+        <div class="social-huge-grid">
+            <a href="#" class="social-huge"><img src="assets/ic_baseline-facebook.webp" alt="Facebook"></a>
+            <a href="#" class="social-huge"><img src="assets/entypo-social_linkedin-with-circle.webp" alt="LinkedIn"></a>
+            <a href="#" class="social-huge"><img src="assets/entypo-social_twitter-with-circle.webp" alt="Twitter"></a>
+            <a href="#" class="social-huge"><img src="assets/streamline-logos_youtube-clip-logo-solid.webp" alt="YouTube"></a>
+        </div>
+    </section>
+
+
+    <!-- Emergency Support Section (New) -->
+    <section class="container section-padding" data-aos="fade-up" style="margin-top: 5rem; margin-bottom: 5rem; background: var(--navy); border-radius: 12px; display: flex; flex-direction: row; gap: 4rem; align-items: center; padding: 4rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+        <div style="flex: 1;">
+            <img src="assets/contact_emergency.webp" alt="Emergency Support" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div style="flex: 1; color: #fff;">
+            <span style="display: inline-block; padding: 5px 15px; background: rgba(255,102,0,0.2); color: var(--orange); border-radius: 20px; font-weight: 600; font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 1px;">24/7 SUPPORT</span>
+            <h2 style="font-family: 'Josefin Sans', sans-serif; font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.2;">Emergency<br><span style="color: var(--orange);">Hotline</span></h2>
+            <p style="font-family: 'Josefin Sans', sans-serif; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; color: #ccc;">Experiencing a critical supply chain disruption or manufacturing failure? Our emergency response team is available 24/7 to provide immediate operational support and rapid component replacement.</p>
+            <h3 style="color: #fff; font-size: 2rem; font-family: 'Josefin Sans', sans-serif;">1-800-METAL-911</h3>
+        </div>
+    </section>
+
+    <!-- Careers Section (New) -->
+    <section class="section-grey section-padding" data-aos="fade-up" style="margin-top: 5rem;">
+        <div class="container" style="display: flex; flex-direction: row-reverse; gap: 4rem; align-items: center;">
+            <div style="flex: 1;">
+                <img src="assets/image 98.webp" alt="Join Our Team" style="width: 100%; height: 450px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            </div>
+            <div style="flex: 1;">
+                <h2 style="font-family: 'Josefin Sans', sans-serif; font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.2;">Join Our<br><span style="color: var(--orange);">Growing Team</span></h2>
+                <p style="font-family: 'Josefin Sans', sans-serif; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">We are always looking for passionate mechanical engineers, skilled CNC operators, and visionary materials scientists. Build a rewarding career at the forefront of the metallurgy industry.</p>
+                <button class="btn-primary" style="font-family: 'Josefin Sans', sans-serif; border-radius: 4px;">View Open Positions</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-new" data-aos="fade-up">
+        <div class="footer-bg">
+            <img src="assets/unsplash_9Qccv5rZtRM.webp" alt="Footer Background" onerror="this.src='assets/image 85.png'">
+        </div>
+        <div class="footer-overlay"></div>
+        <div class="container footer-content">
+            <div class="footer-top">
+                <h2>We're the future of<br>metallurgy industry</h2>
+                <div class="footer-top-actions">
+                    <button class="btn-quote">Get a quote -></button>
+                    <button class="btn-learn">Learn more</button>
+                </div>
+            </div>
+            
+            <div class="footer-main-grid">
+                <div class="footer-links-section">
+                    <h3 class="footer-heading">Quick link</h3>
+                    <div class="links-columns">
+                        <ul class="footer-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">service</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li><a href="404.html">Products</a></li>
+                            <li><a href="404.html">Product single</a></li>
+                            <li><a href="404.html">Contact V1</a></li>
+                            <li><a href="404.html">Contact V2</a></li>
+                            <li><a href="404.html">Contact V3</a></li>
+                            <li><a href="404.html">Blog V1</a></li>
+                            <li><a href="404.html">Blog V2</a></li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li><a href="404.html">Blog V3</a></li>
+                            <li><a href="404.html">Blog post</a></li>
+                            <li><a href="404.html">Coming soon</a></li>
+                            <li><a href="404.html">More Webflow</a></li>
+                            <li><a href="404.html">Templates</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-utility-section">
+                    <h3 class="footer-heading">Utility pages</h3>
+                    <ul class="footer-list">
+                        <li><a href="404.html">Style guide</a></li>
+                        <li><a href="404.html">404 Not found</a></li>
+                        <li><a href="404.html">Password protected</a></li>
+                        <li><a href="404.html">Licenses</a></li>
+                        <li><a href="404.html">Changelog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter-section">
+                    <h3 class="footer-heading-small">Stay tuned for more news</h3>
+                    <p>Subscribe to our newsletter today to<br>receive latest news and discount.</p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                    <div class="footer-socials" style="align-items: center; gap: 20px;">
+                        <a href="#" class="social-icon"><img src="assets/ic_baseline-facebook.webp" alt="Facebook" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/entypo-social_twitter-with-circle.webp" alt="Twitter" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/entypo-social_linkedin-with-circle.webp" alt="LinkedIn" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/streamline-logos_youtube-clip-logo-solid.webp" alt="YouTube" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

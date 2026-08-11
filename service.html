@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Emerging Industries</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: var(--font-body);">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-transparent">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/Brand-logo.webp" alt="Logo" class="logo-icon"> 
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-menu" style="flex: 1; justify-content: center;">
+                <ul class="nav-links" style="margin: 0 auto;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html" class="active">service</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-login" style="background:var(--orange); color:white; border:none; padding:10px 24px; border-radius:20px; font-weight:600; cursor:pointer;" onclick="window.location.href='login.html'">login</button>
+                    <button class="btn-join" style="background:white; color:#000; border:none; padding:10px 24px; border-radius:20px; font-weight:600; cursor:pointer;" onclick="window.location.href='signup.html'">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <section class="service-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('assets/unsplash_u13zBF4r56A (2).webp');">
+        <div class="service-hero-content">
+            <h1 class="gsap-hero-title">A COMPREHENSIVE<br>SET OF SERVICES</h1>
+        </div>
+    </section>
+
+    <!-- SECTION 2: METAL CRAFTING HEAD -->
+    <section class="service-detail-head" >
+        <div class="service-container" data-aos="fade-up">
+            <h2>Metal crafting</h2>
+            <p>Our premier metal crafting service combines traditional blacksmithing expertise with cutting-edge automated machining to deliver high-precision industrial components guaranteed to endure extreme operational stress.</p>
+            
+            <div class="service-large-img" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/unsplash_fZEC4pR4Kpo.webp" alt="Metal Crafting in action">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: FORM & ABOUT SERVICE -->
+    <section class="service-info-section">
+        <div class="service-container service-info-grid">
+            
+            <!-- Left Side: Form and smaller image -->
+            <div class="service-left-col" data-aos="fade-right">
+                <div class="service-lead-form">
+                    <h3>FILL THE FORM TO RECEIVE A CALL</h3>
+                    <p>Provide your basic project details below and our lead structural engineering team will contact you within one business day.</p>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label>Full name</label>
+                            <input type="text" placeholder="John Carter" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" placeholder="example@youremail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone number</label>
+                            <input type="text" placeholder="(123) 456 - 7890" required>
+                        </div>
+                        <button type="submit" class="about-btn-orange pill-btn">Receive a call</button>
+                    </form>
+                </div>
+                
+                <div class="service-welder-img" data-aos="fade-up">
+                    <img src="assets/image 100.webp" alt="Welder">
+                </div>
+            </div>
+            
+            <!-- Right Side: Text content -->
+            <div class="service-right-col" data-aos="fade-left">
+                <h3>About the service</h3>
+                <p>We specialize in heavy-duty structural metalwork and precise alloy fabrication. Utilizing state-of-the-art automation and rigorous human oversight, we guarantee that every crafted piece strictly adheres to the tightest industry tolerances.</p>
+                <p>From aerospace fuselage brackets to large-scale heavy machinery chassis, our comprehensive crafting process ensures maximum durability, seamless assembly, and perfect integration into your existing systems.</p>
+                
+                <h3 style="margin-top: 3rem;">What's part of the service</h3>
+                <p>Our comprehensive crafting pipeline securely covers every vital step from raw material selection to final surface treatment. We ensure quality at every checkpoint:</p>
+                
+                <ul class="service-bullet-list">
+                    <li>Advanced CAD/CAM design analysis for optimal material usage and minimal structural waste.</li>
+                    <li>State-of-the-art CNC milling, precision turning, and flawless automated laser cutting.</li>
+                    <li>Certified complex welding operations and heavy-duty structural joining processes.</li>
+                    <li>Comprehensive surface finishing, hardening, and anti-corrosion chemical treatments.</li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom paragraph -->
+        <div class="service-container" data-aos="fade-up">
+            <p class="service-bottom-para">Our rigorous Quality Assurance protocols guarantee zero-defect delivery across all bulk orders. We routinely conduct advanced ultrasonic testing and precise X-ray inspections on all critical welds and joints, ensuring unparalleled long-term reliability for your most demanding, mission-critical industrial applications globally.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 4: MORE SERVICES IMAGE -->
+    <section class="service-more-img-section">
+        <div class="service-container" data-aos="fade-up">
+            <img src="assets/image 99.webp" alt="Industrial Welding" class="full-width-rounded-img">
+        </div>
+    </section>
+
+    <!-- SECTION 5: MORE SERVICES LIST -->
+    <section class="service-more-list-section">
+        <div class="service-container" data-aos="fade-up">
+            
+            <div class="more-services-header">
+                <h2 style="color: #ff4d00;">More services</h2>
+                <button class="btn-outline-dark pill-btn" onclick="window.location.href='#'">Browse all services</button>
+            </div>
+            
+            <div class="services-list-wrapper">
+                <!-- Item 1 -->
+                <div class="service-list-item" onclick="window.location.href='#'">
+                    <div class="sli-content">
+                        <h3>Metal crafting</h3>
+                        <p>High-precision machining and advanced structural fabrication designed for extreme durability and load-bearing requirements.</p>
+                    </div>
+                    <div class="sli-arrow">&rarr;</div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="service-list-item" onclick="window.location.href='#'">
+                    <div class="sli-content">
+                        <h3>Metal recycling</h3>
+                        <p>Eco-friendly, highly efficient material recovery processes that transform industrial scrap back into pure, usable alloys.</p>
+                    </div>
+                    <div class="sli-arrow">&rarr;</div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="service-list-item" onclick="window.location.href='#'">
+                    <div class="sli-content">
+                        <h3>Heat treatment</h3>
+                        <p>Specialized thermal hardening processes that dramatically improve the tensile strength and operational lifespan of critical components.</p>
+                    </div>
+                    <div class="sli-arrow">&rarr;</div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="service-list-item border-bottom-0" onclick="window.location.href='#'">
+                    <div class="sli-content">
+                        <h3>Quality testing</h3>
+                        <p>Rigorous ultrasonic flaw detection and chemical composition analysis to guarantee compliance with aerospace safety standards.</p>
+                    </div>
+                    <div class="sli-arrow">&rarr;</div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Equipment Showcase Section (New) -->
+    <section class="section-grey section-padding" data-aos="fade-up" style="margin-top: 5rem;">
+        <div class="container" style="display: flex; flex-direction: row-reverse; gap: 4rem; align-items: center;">
+            <div style="flex: 1;">
+                <h2 style="font-family: 'Comfortaa', cursive; font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.2;">Advanced<br><span style="color: var(--orange);">Equipment</span></h2>
+                <p style="font-family: 'Comfortaa', cursive; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">Our facilities are equipped with the most advanced 5-axis CNC machines and robotic milling stations available today, ensuring microscopic precision on every component.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div>
+                        <h3 style="color: var(--orange); font-size: 2rem; margin-bottom: 0.5rem; font-family: 'Comfortaa', cursive;">10k</h3>
+                        <p style="font-weight: 600; font-size: 0.95rem;">Ton Press Capacity</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--orange); font-size: 2rem; margin-bottom: 0.5rem; font-family: 'Comfortaa', cursive;">0.01mm</h3>
+                        <p style="font-weight: 600; font-size: 0.95rem;">Cutting Tolerance</p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="assets/service_equipment.webp" alt="Advanced Equipment" style="width: 100%; height: 450px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Lifecycle Section (New) -->
+    <section class="container section-padding" data-aos="fade-up" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <span style="display: inline-block; padding: 5px 15px; background: #eee; color: var(--navy); border-radius: 20px; font-weight: 600; font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 1px;">OUR WORKFLOW</span>
+            <h2 style="font-family: 'Comfortaa', cursive; font-size: 2.8rem; margin-bottom: 1.5rem;">The Manufacturing <span style="color: var(--orange);">Lifecycle</span></h2>
+            <p style="max-width: 700px; margin: 0 auto; font-family: 'Comfortaa', cursive; font-size: 1.1rem; line-height: 1.6;">From initial blueprint consultation to final robotic assembly, discover how we seamlessly transition your project from concept to physical reality.</p>
+        </div>
+        <div style="position: relative;">
+            <img src="assets/service_lifecycle.webp" alt="Service Lifecycle" style="width: 100%; height: 500px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); background: #fff; padding: 2rem 4rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; gap: 3rem; text-align: center;">
+                <div>
+                    <div style="font-size: 2rem; color: var(--orange); margin-bottom: 0.5rem;">1</div>
+                    <p style="font-weight: 700; font-family: 'Comfortaa', cursive; margin-bottom: 0;">Consultation</p>
+                </div>
+                <div>
+                    <div style="font-size: 2rem; color: var(--orange); margin-bottom: 0.5rem;">2</div>
+                    <p style="font-weight: 700; font-family: 'Comfortaa', cursive; margin-bottom: 0;">Prototyping</p>
+                </div>
+                <div>
+                    <div style="font-size: 2rem; color: var(--orange); margin-bottom: 0.5rem;">3</div>
+                    <p style="font-weight: 700; font-family: 'Comfortaa', cursive; margin-bottom: 0;">Production</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-new" data-aos="fade-up">
+        <div class="footer-bg">
+            <img src="assets/unsplash_9Qccv5rZtRM.webp" alt="Footer Background" onerror="this.src='assets/image 85.png'">
+        </div>
+        <div class="footer-overlay"></div>
+        <div class="container footer-content">
+            <div class="footer-top">
+                <h2>We're the future of<br>metallurgy industry</h2>
+                <div class="footer-top-actions">
+                    <button class="btn-quote">Get a quote -></button>
+                    <button class="btn-learn">Learn more</button>
+                </div>
+            </div>
+            
+            <div class="footer-main-grid">
+                <div class="footer-links-section">
+                    <h3 class="footer-heading">Quick link</h3>
+                    <div class="links-columns">
+                        <ul class="footer-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">service</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li><a href="404.html">Products</a></li>
+                            <li><a href="404.html">Product single</a></li>
+                            <li><a href="404.html">Contact V1</a></li>
+                            <li><a href="404.html">Contact V2</a></li>
+                            <li><a href="404.html">Contact V3</a></li>
+                            <li><a href="404.html">Blog V1</a></li>
+                            <li><a href="404.html">Blog V2</a></li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li><a href="404.html">Blog V3</a></li>
+                            <li><a href="404.html">Blog post</a></li>
+                            <li><a href="404.html">Coming soon</a></li>
+                            <li><a href="404.html">More Webflow</a></li>
+                            <li><a href="404.html">Templates</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-utility-section">
+                    <h3 class="footer-heading">Utility pages</h3>
+                    <ul class="footer-list">
+                        <li><a href="404.html">Style guide</a></li>
+                        <li><a href="404.html">404 Not found</a></li>
+                        <li><a href="404.html">Password protected</a></li>
+                        <li><a href="404.html">Licenses</a></li>
+                        <li><a href="404.html">Changelog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter-section">
+                    <h3 class="footer-heading-small">Stay tuned for more news</h3>
+                    <p>Subscribe to our newsletter today to<br>receive latest news and discount.</p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                    <div class="footer-socials" style="align-items: center; gap: 20px;">
+                        <a href="#" class="social-icon"><img src="assets/ic_baseline-facebook.webp" alt="Facebook" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/entypo-social_twitter-with-circle.webp" alt="Twitter" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/entypo-social_linkedin-with-circle.webp" alt="LinkedIn" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/streamline-logos_youtube-clip-logo-solid.webp" alt="YouTube" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ once: true, offset: 50 });
+            
+            // Hero GSAP Animations
+            gsap.from(".gsap-hero-title", { y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.2 });
+        });
+    </script>
+</body>
+</html>

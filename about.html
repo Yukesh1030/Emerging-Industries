@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Emerging Industries</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="overflow-x: hidden; margin: 0; padding: 0;">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-transparent">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/Brand-logo.webp" alt="Logo" class="logo-icon"> 
+            </div>
+            <!-- Hamburger Icon -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="nav-menu" style="flex: 1; justify-content: center;">
+                <ul class="nav-links" style="margin: 0 auto;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="service.html">service</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-login" style="background:var(--orange); color:white; border:none; padding:10px 24px; border-radius:20px; font-weight:600; cursor:pointer;" onclick="window.location.href='login.html'">login</button>
+                    <button class="btn-join" style="background:white; color:#000; border:none; padding:10px 24px; border-radius:20px; font-weight:600; cursor:pointer;" onclick="window.location.href='signup.html'">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <section class="about-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('assets/image 87.webp');">
+        <div class="about-hero-content">
+            <h1 class="gsap-hero-title">ABOUT OUR<br>COMPANY</h1>
+            
+            <div class="about-hero-bottom">
+                <div class="about-hero-buttons gsap-hero-btns">
+                    <button class="about-btn-orange" onclick="window.location.href='contact.html'">Join us ></button>
+                    <button class="about-btn-outline" onclick="window.scrollTo({top: document.querySelector('.about-values').offsetTop, behavior: 'smooth'})">Our values</button>
+                </div>
+                
+                <div class="about-hero-text gsap-hero-text">
+                    <p>Pioneering the future of industrial infrastructure with cutting-edge metallurgical science, precision engineering, and a commitment to sustainable, high-impact manufacturing solutions worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: WORKERS & STATS -->
+    <section class="about-stats-section">
+        <div class="stats-bg-black"></div>
+        <div class="stats-bg-white"></div>
+        
+        <div class="stats-container">
+            <div class="stats-image-wrapper" data-aos="fade-up" data-aos-duration="1200">
+                <img src="assets/image 88.webp" alt="Our Engineering Team">
+            </div>
+            
+            <div class="stats-numbers-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-block">
+                    <h4>Clients<br>satisfaction</h4>
+                    <h2>100%</h2>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-block">
+                    <h4>Clients<br>worldwide</h4>
+                    <h2>560+</h2>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-block">
+                    <h4>Years of<br>experience</h4>
+                    <h2>24+</h2>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-block">
+                    <h4>Team<br>members</h4>
+                    <h2>32+</h2>
+                </div>
+            </div>
+            
+            <!-- Bottom Border Line -->
+            <div style="width: 80%; max-width: 900px; margin: 0 auto; border-bottom: 2px solid #000; padding-bottom: 30px;"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE STORY -->
+    <section class="about-story-section">
+        <div class="story-container">
+            <div class="story-image" data-aos="fade-right">
+                <img src="assets/unsplash_sigzPF1sT7k.webp" alt="Construction Foundation">
+            </div>
+            <div class="story-content" data-aos="fade-left">
+                <div class="section-marker">
+                    <span class="marker-num">01</span>
+                    <span class="marker-line"></span>
+                </div>
+                <h2>The story of how our<br>company<br>was founded</h2>
+                <p>Founded by a passionate group of visionary engineers in a modest workshop, we began with a single blast furnace and a bold mission to redefine structural integrity. Through decades of relentless dedication, innovation, and strategic partnerships, we have successfully evolved into a globally recognized leader in heavy industrial fabrication.</p>
+                <button class="about-btn-orange pill-btn" onclick="window.location.href='contact.html'">join us &rarr;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: BRANDS & COMPANIES -->
+    <section class="about-brands-section">
+        <div class="brands-container" data-aos="fade-up">
+            <div class="section-marker" style="justify-content: flex-start;">
+                <span class="marker-num">02</span>
+                <span class="marker-line"></span>
+            </div>
+            <h2>Brands & companies<br>we worked with</h2>
+            
+            <div class="brands-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="brand-block">
+                    <h3>Construct X</h3>
+                    <p>Providing high-tensile steel girders and custom load-bearing support structures for state-of-the-art commercial skyscrapers and residential high-rises across North America.</p>
+                </div>
+                <div class="brand-divider"></div>
+                <div class="brand-block">
+                    <h3>Cargo X</h3>
+                    <p>Engineering lightweight, exceptionally corrosion-resistant aluminum alloy components for modern maritime logistics, massive cargo vessels, and deep-sea freight containers.</p>
+                </div>
+                <div class="brand-divider"></div>
+                <div class="brand-block">
+                    <h3>Carpenters X</h3>
+                    <p>Supplying specialized CNC machined mechanical parts and advanced thermal treatment services to empower independent manufacturing facilities globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CORE VALUES -->
+    <section class="about-values-section about-values">
+        <div class="values-container" data-aos="fade-up">
+            <div class="section-marker centered-marker">
+                <span class="marker-line"></span>
+                <span class="marker-num">03</span>
+                <span class="marker-line"></span>
+            </div>
+            
+            <h2 class="text-center">The values that drive<br>everything we do</h2>
+            <p class="values-subtitle">Our core principles heavily shape our workplace culture, guide our critical engineering decisions, and ensure we consistently deliver unparalleled excellence.</p>
+            
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up" data-aos-delay="0">
+                    <img src="assets/Vector.webp" alt="Quality" class="value-icon">
+                    <h3>Quality</h3>
+                    <p>We maintain rigorous QA protocols, ensuring every manufactured component surpasses international industry standards.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/Vector.webp" alt="Innovation" class="value-icon">
+                    <h3>Innovation</h3>
+                    <p>Continuously adopting new technologies to drastically streamline production and invent much stronger composite materials.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/Vector.webp" alt="Security" class="value-icon">
+                    <h3>Security</h3>
+                    <p>Prioritizing strict workplace safety rules and protecting our clients' proprietary structural designs with total confidentiality.</p>
+                </div>
+                
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/Vector.webp" alt="Teamwork" class="value-icon">
+                    <h3>Teamwork</h3>
+                    <p>Fostering a collaborative environment where cross-functional engineering teams solve complex structural challenges together.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/Vector.webp" alt="Leadership" class="value-icon">
+                    <h3>Leadership</h3>
+                    <p>Setting the ultimate standard in the metallurgy sector and actively guiding our industry toward a vastly more sustainable future.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/Vector.webp" alt="Sustainability" class="value-icon">
+                    <h3>Sustainability</h3>
+                    <p>Implementing eco-friendly manufacturing processes and ethically sourcing raw materials to greatly minimize our carbon footprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- SECTION 4: LOCATION -->
+    <section class="about-location-section">
+        <div class="location-container" data-aos="fade-up">
+            <div class="section-marker">
+                <span class="marker-num">04</span>
+                <span class="marker-line"></span>
+            </div>
+            <h2>Visit our location</h2>
+            
+            <div class="location-top-bar">
+                <p>Explore our state-of-the-art manufacturing facilities strategically positioned across key industrial hubs to ensure rapid fulfillment and unmatched quality control.</p>
+                <div class="location-tabs">
+                    <span class="loc-tab active">PITTSBURGH</span>
+                    <span class="loc-tab">CLEVELAND</span>
+                    <span class="loc-tab">BIRMINGHAM</span>
+                </div>
+            </div>
+            
+            <div class="location-image-area" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/unsplash_fZEC4pR4Kpo.webp" alt="Factory Floor" onerror="this.src='assets/unsplash_SLIFI67jv5k.png'">
+                <div class="location-overlay-box" data-aos="fade-right" data-aos-delay="400">
+                    <h3>Pittsburgh, PA</h3>
+                    <p>Our flagship 250,000 sq ft facility handles heavy-duty smelting, large-scale custom fabrication, and houses our primary metallurgy research laboratory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: TEAM -->
+    <section class="about-team-section">
+        <div class="team-container" data-aos="fade-up">
+            <div class="section-marker centered-marker">
+                <span class="marker-line"></span>
+                <span class="marker-num">05</span>
+                <span class="marker-line"></span>
+            </div>
+            <h2 class="text-center">Meet the team<br>behind Industrial</h2>
+            
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+                    <img src="assets/image 89.webp" alt="Lily Woods" onerror="this.src='assets/image 101.png'">
+                    <h3>Lily Woods</h3>
+                    <p>PROJECT MANAGER</p>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/image 90.webp" alt="John Carter" onerror="this.src='assets/image 103.png'">
+                    <h3>John Carter</h3>
+                    <p>CEO & FOUNDER</p>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/image 91.webp" alt="Kathie Corl" onerror="this.src='assets/image 104.png'">
+                    <h3>Kathie Corl</h3>
+                    <p>CTO & CO-FOUNDER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Leadership Section (New) -->
+    <section class="section-grey section-padding" data-aos="fade-up" style="margin-top: 5rem;">
+        <div class="container" style="display: flex; flex-direction: row; gap: 4rem; align-items: center;">
+            <div style="flex: 1;">
+                <h2 style="font-family: 'Comfortaa', cursive; font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.2;">Visionary<br><span style="color: var(--orange);">Leadership</span></h2>
+                <p style="font-family: 'Comfortaa', cursive; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">Our executive board consists of veteran materials scientists and industrial engineers who have spent decades pushing the boundaries of what is possible in modern metallurgy and manufacturing.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <div>
+                        <h4 style="color: var(--orange); font-family: 'Comfortaa', cursive; font-size: 1.2rem; margin-bottom: 0.5rem;">Dr. Sarah Jenkins</h4>
+                        <p style="font-size: 0.9rem; font-weight: 600;">Chief Engineer</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--orange); font-family: 'Comfortaa', cursive; font-size: 1.2rem; margin-bottom: 0.5rem;">Marcus Vance</h4>
+                        <p style="font-size: 0.9rem; font-weight: 600;">VP of Operations</p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="assets/about_core_values.webp" alt="Leadership Team" style="width: 100%; height: 450px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate History Section (New) -->
+    <section class="container section-padding" data-aos="fade-up" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <span style="display: inline-block; padding: 5px 15px; background: #eee; color: var(--navy); border-radius: 20px; font-weight: 600; font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 1px;">OUR JOURNEY</span>
+            <h2 style="font-family: 'Comfortaa', cursive; font-size: 2.8rem; margin-bottom: 1.5rem;">A Legacy of <span style="color: var(--orange);">Innovation</span></h2>
+            <p style="max-width: 700px; margin: 0 auto; font-family: 'Comfortaa', cursive; font-size: 1.1rem; line-height: 1.6;">From a modest mid-century foundry to a global leader in advanced robotics and metallurgy, trace our evolution through decades of industrial excellence.</p>
+        </div>
+        <div style="position: relative;">
+            <img src="assets/about_history.webp" alt="Corporate History" style="width: 100%; height: 500px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <div style="position: absolute; top: 40px; left: 40px; background: rgba(255,255,255,0.9); padding: 1.5rem; border-radius: 8px; max-width: 250px;">
+                <h4 style="color: var(--orange); font-size: 1.5rem; margin-bottom: 0.5rem;">1954</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0; font-weight: 600;">First steel foundry established.</p>
+            </div>
+            <div style="position: absolute; bottom: 40px; right: 40px; background: rgba(11,19,43,0.9); padding: 1.5rem; border-radius: 8px; max-width: 250px; color: #fff;">
+                <h4 style="color: var(--orange); font-size: 1.5rem; margin-bottom: 0.5rem;">Today</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0; color: #fff;">Fully automated smart factories globally.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-new" data-aos="fade-up">
+        <div class="footer-bg">
+            <img src="assets/unsplash_9Qccv5rZtRM.webp" alt="Footer Background" onerror="this.src='assets/image 85.png'">
+        </div>
+        <div class="footer-overlay"></div>
+        <div class="container footer-content">
+            <div class="footer-top">
+                <h2>We're the future of<br>metallurgy industry</h2>
+                <div class="footer-top-actions">
+                    <button class="btn-quote">Get a quote -></button>
+                    <button class="btn-learn">Learn more</button>
+                </div>
+            </div>
+            
+            <div class="footer-main-grid">
+                <div class="footer-links-section">
+                    <h3 class="footer-heading">Quick link</h3>
+                    <div class="links-columns">
+                        <ul class="footer-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">service</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li><a href="404.html">Products</a></li>
+                            <li><a href="404.html">Product single</a></li>
+                            <li><a href="404.html">Contact V1</a></li>
+                            <li><a href="404.html">Contact V2</a></li>
+                            <li><a href="404.html">Contact V3</a></li>
+                            <li><a href="404.html">Blog V1</a></li>
+                            <li><a href="404.html">Blog V2</a></li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li><a href="404.html">Blog V3</a></li>
+                            <li><a href="404.html">Blog post</a></li>
+                            <li><a href="404.html">Coming soon</a></li>
+                            <li><a href="404.html">More Webflow</a></li>
+                            <li><a href="404.html">Templates</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-utility-section">
+                    <h3 class="footer-heading">Utility pages</h3>
+                    <ul class="footer-list">
+                        <li><a href="404.html">Style guide</a></li>
+                        <li><a href="404.html">404 Not found</a></li>
+                        <li><a href="404.html">Password protected</a></li>
+                        <li><a href="404.html">Licenses</a></li>
+                        <li><a href="404.html">Changelog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter-section">
+                    <h3 class="footer-heading-small">Stay tuned for more news</h3>
+                    <p>Subscribe to our newsletter today to<br>receive latest news and discount.</p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                    <div class="footer-socials" style="align-items: center; gap: 20px;">
+                        <a href="#" class="social-icon"><img src="assets/ic_baseline-facebook.webp" alt="Facebook" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/entypo-social_twitter-with-circle.webp" alt="Twitter" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/entypo-social_linkedin-with-circle.webp" alt="LinkedIn" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                        <a href="#" class="social-icon"><img src="assets/streamline-logos_youtube-clip-logo-solid.webp" alt="YouTube" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ once: true, offset: 50 });
+            
+            // Hero GSAP Animations
+            gsap.from(".gsap-hero-title", { y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.2 });
+            gsap.from(".gsap-hero-btns", { y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.5 });
+            gsap.from(".gsap-hero-text", { x: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.7 });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Emerging Industries</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="margin: 0; padding: 0; overflow-x: hidden;">
+
+    <div class="auth-container">
+        <!-- Left Panel -->
+        <div class="auth-left" style="background-image: url('assets/image 102.webp');" data-aos="fade-right" data-aos-duration="1000">
+            <div class="auth-left-content">
+                <h1 class="auth-huge-title" style="color:white;">LOGIN</h1>
+                <h2 class="auth-subtitle" style="color: white;">FIND YOUR OWN WAY</h2>
+                <p class="auth-desc" style="color: white;" >Schedule as a soon playh visit in just a few click<br>fhfieuby iyje uwynf Continue with Facebook<br>visits in just in your minda few click</p>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="auth-right auth-login-bg" data-aos="fade-left" data-aos-duration="1000">
+            <div class="auth-right-content">
+                <h2 class="auth-welcome" style="font-family: 'Josefin Sans', sans-serif;">Welcome Back</h2>
+                <h3 class="auth-action-title">Login to your account</h3>
+
+                <form class="auth-form" id="loginForm">
+                    <div class="auth-form-group">
+                        <label style="display:block; margin-bottom: 8px; color: #8B98AA; font-size: 0.95rem;">Login As</label>
+                        <select class="auth-input auth-input-select auth-input-dark" id="loginAs" required>
+                            <option value="Admin">Admin</option>
+                            <option value="Client">Client</option>
+                        </select>
+                    </div>
+                    <div class="auth-form-group">
+                        <input type="email" class="auth-input auth-input-dark" id="loginEmail" placeholder="Email Address" required>
+                    </div>
+                    <div class="auth-form-group">
+                        <input type="password" class="auth-input auth-input-dark" placeholder="Password" required>
+                    </div>
+                    
+                    <div class="auth-options">
+                        <label class="auth-remember">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="404.html" class="auth-forgot">Forgot password</a>
+                    </div>
+
+                    <button type="submit" class="auth-submit-btn">Log In</button>
+                    
+                    <div class="auth-back-wrapper">
+                        <button type="button" class="auth-back-btn" onclick="window.location.href='index.html'">← Back</button>
+                    </div>
+
+                    <div class="auth-divider">
+                        <span>Instant Login</span>
+                    </div>
+
+                    <div class="auth-social-group">
+                        <button type="button" class="auth-social-btn">
+                            <img src="assets/google_logo.webp" alt="G" width="16">
+                            Continue with Google
+                        </button>
+                        <button type="button" class="auth-social-btn">
+                            <img src="assets/ic_baseline-facebook.webp" alt="F" width="16" style="filter: brightness(0) invert(1);">
+                            Continue with Facebook
+                        </button>
+                    </div>
+
+                    <p class="auth-footer-text">Don't have an account? <a href="signup.html">Sign up</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

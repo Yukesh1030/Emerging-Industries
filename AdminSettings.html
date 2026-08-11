@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - STACKLY</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button class="close-sidebar-btn" onclick="document.querySelector('.sidebar').classList.remove('show')" style="background:none; border:none; color:white; font-size:1.5rem; position:absolute; top:20px; right:20px; display:none;">✕</button>
+        <div class="sidebar-header" style="justify-content: center;">
+            <img src="assets/Brand-logo.webp" alt="Emerge-X" style="max-height: 40px;">
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li onclick="window.location.href='AdminDashboard.html'">Dashboard</li>
+            <li onclick="window.location.href='AdminIndustries.html'">Industries</li>
+            <li onclick="window.location.href='AdminCompanies.html'">Companies</li>
+            <li onclick="window.location.href='AdminInvestments.html'">Investments</li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li onclick="window.location.href='AdminIntelligence.html'">Intelligence</li>
+            <li onclick="window.location.href='AdminUsers.html'">Users & Clients</li>
+            <li class="active" onclick="window.location.href='AdminSettings.html'">Settings</li>
+        </ul>
+
+        <button class="logout-btn" onclick="window.location.href='login.html'">↪ Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <img src="assets/Brand-logo.webp" alt="Emerge-X" class="mobile-brand-logo" style="max-height: 36px; object-fit: contain;">
+        <button class="mobile-menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+    </div>
+
+        <div class="overview-header">
+            <div class="overview-titles">
+                <h1>SETTINGS</h1>
+                <p>Here is the summary of overall data</p>
+            </div>
+            <div class="user-profile-header">
+                <div class="user-avatar" id="userAvatar">Y</div>
+                <div class="user-info">
+                    <div class="user-email" id="userEmailDisplay">yukeshyuki18@gmail.com</div>
+                    <div class="user-role" id="userRoleDisplay">System Admin</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="charts-grid" data-aos="fade-up">
+            <div class="chart-card gsap-stagger">
+                <div class="chart-header">
+                    <h3>Profile Settings</h3>
+                </div>
+                <form class="mock-form" style="display:flex; flex-direction:column; gap:16px;">
+                    <input type="text" class="sidebar-search" placeholder="Full Name" value="Yukesh" required>
+                    <input type="email" class="sidebar-search" placeholder="Email" value="yukeshyuki18@gmail.com" required>
+                    <button type="submit" class="filter-btn" style="width: 150px; background:var(--kpi-grad-start); border-color:var(--kpi-grad-start);">Save Changes</button>
+                </form>
+            </div>
+            <div class="chart-card gsap-stagger">
+                <div class="chart-header">
+                    <h3>System Preferences</h3>
+                </div>
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px;">
+                    <span>Email Notifications</span>
+                    <input type="checkbox" checked>
+                </div>
+                <div style="display:flex; align-items:center; justify-content:space-between;">
+                    <span>Dark Mode Focus</span>
+                    <input type="checkbox" checked>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Additional Section: Security & API -->
+        <div class="charts-grid" style="margin-top: 32px;" data-aos="fade-up">
+            <div class="chart-card full-width gsap-stagger">
+                <div class="chart-header">
+                    <h3>Security & Integrations</h3>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:24px;">
+                    <div>
+                        <h4 style="margin: 0 0 8px 0; color:var(--text-main);">Two-Factor Authentication</h4>
+                        <p style="margin: 0 0 12px 0; color:var(--text-muted); font-size:0.95rem;">Enhance account security by requiring a verification code upon login.</p>
+                        <button class="filter-btn" style="background:var(--kpi-grad-start); border-color:var(--kpi-grad-start);">Enable 2FA</button>
+                    </div>
+                    <hr style="border:none; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <div>
+                        <h4 style="margin: 0 0 8px 0; color:var(--text-main);">API Keys</h4>
+                        <p style="margin: 0 0 12px 0; color:var(--text-muted); font-size:0.95rem;">Manage your active API keys for external data integrations.</p>
+                        <div style="display:flex; align-items:center; gap: 12px;">
+                            <input type="text" class="sidebar-search" value="sk_test_8f92j..." readonly style="width: 250px; margin:0; opacity:0.7;">
+                            <button class="filter-btn">Regenerate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

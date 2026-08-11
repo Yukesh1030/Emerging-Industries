@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard - EMERGE-X</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button class="close-sidebar-btn" onclick="document.querySelector('.sidebar').classList.remove('show')" style="background:none; border:none; color:white; font-size:1.5rem; position:absolute; top:20px; right:20px; display:none;">✕</button>
+        <div class="sidebar-header" style="justify-content: center;">
+            <img src="assets/Brand-logo.webp" alt="Emerge-X" style="max-height: 40px;">
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li onclick="window.location.href='ClientDashboard.html'">Dashboard</li>
+            <li onclick="window.location.href='ClientExplore.html'">Explore Industries</li>
+            <li class="active" onclick="window.location.href='ClientInsights.html'">Market Insights</li>
+            <li onclick="window.location.href='ClientPortfolio.html'">My Portfolio</li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li onclick="window.location.href='ClientAccount.html'">Account Setup</li>
+            <li onclick="window.location.href='ClientFeedback.html'">Feedback</li>
+        </ul>
+
+        <button class="logout-btn" onclick="window.location.href='login.html'">↪ Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <img src="assets/Brand-logo.webp" alt="Emerge-X" class="mobile-brand-logo" style="max-height: 36px; object-fit: contain;">
+        <button class="mobile-menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+    </div>
+
+        <div class="overview-header">
+            <div class="overview-titles">
+                <h1>MARKET INSIGHTS</h1>
+                <p>Here is the summary of your portfolio</p>
+            </div>
+            <div class="user-profile-header">
+                <div class="user-avatar" id="userAvatar">Y</div>
+                <div class="user-info">
+                    <div class="user-email" id="userEmailDisplay">yukeshyuki18@gmail.com</div>
+                    <div class="user-role" id="userRoleDisplay">System Admin</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="charts-grid" data-aos="fade-up">
+            <div class="chart-card gsap-stagger">
+                <div class="chart-header">
+                    <h3>Personalized Recommendations</h3>
+                </div>
+                <div class="inner-card">
+                    <div class="inner-card-title">Increase AI Allocation</div>
+                    <div class="inner-card-value">High Priority</div>
+                    <div class="inner-card-status">Based on your risk profile</div>
+                </div>
+                <div class="inner-card">
+                    <div class="inner-card-title">Diversify into Space Tech</div>
+                    <div class="inner-card-value">Medium Priority</div>
+                    <div class="inner-card-status">Long-term growth</div>
+                </div>
+            </div>
+            
+            <div class="chart-card gsap-stagger" data-aos="fade-up" data-aos-delay="100">
+                <div class="chart-header">
+                    <h3>Market News Feed</h3>
+                </div>
+                <div style="padding: 10px 0; color: var(--text-muted); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <strong>European Union passes new AI regulations</strong><br>
+                    <span style="font-size: 0.8rem;">2 hours ago</span>
+                </div>
+                <div style="padding: 10px 0; color: var(--text-muted); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <strong>Solid-state battery breakthrough reported</strong><br>
+                    <span style="font-size: 0.8rem;">5 hours ago</span>
+                </div>
+                <div style="padding: 10px 0; color: var(--text-muted); line-height: 1.6;">
+                    <strong>Biotech IPOs see record breaking quarter</strong><br>
+                    <span style="font-size: 0.8rem;">1 day ago</span>
+                </div>
+                <form style="display:inline; width:100%;"><button type="submit" class="filter-btn" style="background:var(--kpi-grad-start); border-color:var(--kpi-grad-start); width: 100%; margin-top: 10px;">View Full Report</button></form>
+            </div>
+        </div>
+
+
+        <!-- 1. Weekly Analyst Picks -->
+        <div class="charts-grid" style="margin-top: 32px;" data-aos="fade-up">
+            <div class="chart-card full-width gsap-stagger">
+                <div class="chart-header">
+                    <h3>Weekly Analyst Top Picks</h3>
+                </div>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                    <div class="inner-card" style="margin:0;">
+                        <div class="inner-card-title">GreenTech Solutions</div>
+                        <div class="inner-card-value">Strong Buy</div>
+                        <div class="inner-card-status">Target: $145.00</div>
+                    </div>
+                    <div class="inner-card" style="margin:0;">
+                        <div class="inner-card-title">AeroDynamics Space</div>
+                        <div class="inner-card-value">Hold</div>
+                        <div class="inner-card-status">Target: $42.50</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Risk vs Reward -->
+        <div class="charts-grid" style="margin-top: 32px;" data-aos="fade-up">
+            <div class="chart-card gsap-stagger">
+                <div class="chart-header">
+                    <h3>Risk Assessment</h3>
+                </div>
+                <p style="color:var(--text-muted);">Your portfolio is currently optimized for moderate growth with low volatility. No immediate adjustments needed.</p>
+                <form style="display:inline;"><button type="submit" class="filter-btn">Run Stress Test</button></form>
+            </div>
+        </div>
+
+        <!-- 3. Macro Indicators -->
+        <div class="kpi-grid" style="margin-top: 32px;">
+            <div class="kpi-card gsap-stagger" data-aos="fade-up">
+                <div class="kpi-title">Inflation Rate (CPI)</div>
+                <div class="kpi-value">2.4%</div>
+                <div class="kpi-trend">Stabilizing</div>
+            </div>
+            <div class="kpi-card gsap-stagger" data-aos="fade-up" data-aos-delay="100">
+                <div class="kpi-title">Interest Rates</div>
+                <div class="kpi-value">4.50%</div>
+                <div class="kpi-trend">Unchanged</div>
+            </div>
+        </div>
+
+        <!-- 4. Expert Webinars -->
+        <div class="charts-grid" style="margin-top: 32px;" data-aos="fade-up">
+            <div class="chart-card full-width gsap-stagger">
+                <div class="chart-header">
+                    <h3>Upcoming Exclusive Webinars</h3>
+                </div>
+                <div class="inner-card" style="display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                        <div style="font-weight:600; color:white;">The Future of Quantum Computing</div>
+                        <div style="font-size:0.9rem; color:var(--text-muted);">Tomorrow at 10:00 AM EST</div>
+                    </div>
+                    <form style="display:inline;"><button type="submit" class="filter-btn" style="background:var(--kpi-grad-start); border-color:var(--kpi-grad-start);">Register</button></form>
+                </div>
+            </div>
+        </div>
+
+</main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
