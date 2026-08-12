@@ -15,10 +15,9 @@
     --light-bg: #F8F9FA;
     --text-dark: #1A1A1A;
     --text-light: #F0F0F0;
-    --font-heading: 'Comfortaa', cursive;
-    --font-heading: 'Poppins', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
     --font-body: 'Outfit', sans-serif;
-    --font-body: 'Poppins', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
 }
 
 body {
@@ -114,6 +113,7 @@ button {
     padding: 1.5rem 0;
     transition: all 0.3s ease;
     background-color: #000000;
+    font-family: var(--font-poppins);
 }
 
 .navbar.navbar-transparent {
@@ -139,14 +139,14 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: var(--font-heading);
+    font-family: var(--font-poppins);
     font-weight: 700;
     font-size: 1.2rem;
     color: #FFF;
 }
 
 .logo-icon {
-    max-height: 30px;
+    max-height: 60px;
     width: auto;
 }
 
@@ -1305,7 +1305,7 @@ button {
 .auth-container {
     display: flex;
     min-height: 100vh;
-    font-family: var(--font-body);
+    font-family: var(--font-poppins);
 }
 
 /* Left Panel */
@@ -3284,4 +3284,10 @@ html, body {
         flex-direction: column !important;
         gap: 1.5rem !important;
     }
+}
+
+/* Hero Zoom Animation */
+@keyframes zoomInOut {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
 }

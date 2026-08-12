@@ -188,3 +188,52 @@ forms.forEach(form => {
         }
     });
 });
+
+// Add zoom animations to hero section backgrounds
+const bgImages = document.querySelectorAll('.hero-bg img');
+bgImages.forEach(img => {
+    img.style.animation = 'zoomInOut 20s infinite alternate ease-in-out';
+    img.style.transformOrigin = 'center center';
+});
+
+const inlineHeroes = document.querySelectorAll('.about-hero, .service-hero, .page-hero');
+inlineHeroes.forEach(section => {
+    const bgImage = section.style.backgroundImage;
+    if (bgImage && bgImage !== 'none' && bgImage !== 'initial') {
+        section.style.backgroundImage = 'none';
+        section.style.position = 'relative';
+        section.style.overflow = 'hidden';
+        
+        const bgWrap = document.createElement('div');
+        bgWrap.style.position = 'absolute';
+        bgWrap.style.top = '0';
+        bgWrap.style.left = '0';
+        bgWrap.style.width = '100%';
+        bgWrap.style.height = '100%';
+        bgWrap.style.zIndex = '0';
+        bgWrap.style.overflow = 'hidden';
+        
+        const imgDiv = document.createElement('div');
+        imgDiv.style.position = 'absolute';
+        imgDiv.style.top = '0';
+        imgDiv.style.left = '0';
+        imgDiv.style.width = '100%';
+        imgDiv.style.height = '100%';
+        imgDiv.style.backgroundImage = bgImage;
+        imgDiv.style.backgroundSize = section.style.backgroundSize || 'cover';
+        imgDiv.style.backgroundPosition = section.style.backgroundPosition || 'center';
+        imgDiv.style.animation = 'zoomInOut 20s infinite alternate ease-in-out';
+        imgDiv.style.transformOrigin = 'center center';
+        
+        bgWrap.appendChild(imgDiv);
+        
+        Array.from(section.children).forEach(child => {
+            if(window.getComputedStyle(child).position === 'static') {
+                child.style.position = 'relative';
+            }
+            child.style.zIndex = '1';
+        });
+        
+        section.insertBefore(bgWrap, section.firstChild);
+    }
+});
