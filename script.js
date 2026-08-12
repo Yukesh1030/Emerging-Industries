@@ -237,3 +237,54 @@ inlineHeroes.forEach(section => {
         section.insertBefore(bgWrap, section.firstChild);
     }
 });
+
+// Number Counting Animation
+const counterSelectors = '.hero-stats .stat h3, .stat-block h2, .stats-grid-mobile h3, .stat-number';
+const counters = document.querySelectorAll(counterSelectors);
+
+const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            if (!el.classList.contains('counted')) {
+                el.classList.add('counted');
+                const text = el.innerText.trim();
+                const match = text.match(/^([\d\.]+)(.*)$/);
+                if (match) {
+                    const targetNum = parseFloat(match[1]);
+                    const suffix = match[2];
+                    const isFloat = match[1].includes('.');
+                    
+                    let startNum = 0;
+                    const duration = 2000;
+                    const startTime = performance.now();
+                    
+                    const updateCounter = (currentTime) => {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const easeProgress = 1 - Math.pow(1 - progress, 3);
+                        const currentNum = startNum + (targetNum - startNum) * easeProgress;
+                        
+                        if (isFloat) {
+                            el.innerText = currentNum.toFixed(2) + suffix;
+                        } else {
+                            el.innerText = Math.floor(currentNum) + suffix;
+                        }
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            el.innerText = text;
+                        }
+                    };
+                    
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+        }
+    });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+    counterObserver.observe(counter);
+});

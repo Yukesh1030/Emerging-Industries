@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -3290,4 +3292,14 @@ html, body {
 @keyframes zoomInOut {
     0% { transform: scale(1); }
     100% { transform: scale(1.1); }
+}
+
+/* Stat Counters Styling */
+.hero-stats .stat h3,
+.stat-block h2,
+.stats-grid-mobile h3 {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 400 !important;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.05em;
 }
