@@ -112,7 +112,7 @@ button {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 0.5rem 0;
     transition: all 0.3s ease;
     background-color: #000000;
     font-family: var(--font-poppins);
@@ -124,7 +124,7 @@ button {
 
 .navbar.scrolled {
     background-color: #000000; /* Solid navy background */
-    padding: 1rem 0;
+    padding: 1rem 0 0.2rem 0;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
@@ -3314,3 +3314,24 @@ html, body {
 }
 
 
+
+/* Process Card Hover */
+.process-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (min-width: 769px) {
+    .process-card.card-1:hover, .process-card.card-3:hover {
+        transform: translateY(30px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .process-card.card-2:hover {
+        transform: translateY(-50px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+}
+@media (max-width: 768px) {
+    .process-card:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+}
