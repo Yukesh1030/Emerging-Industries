@@ -3335,3 +3335,61 @@ html, body {
         box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     }
 }
+
+/* Advanced Hover Animation for Services List */
+.service-list-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Base text styling overrides */
+.service-list-content, .service-list-content h3, .service-list-content p, .service-list-icon i {
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* The sweeping background */
+.service-list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--orange), #ff8c42);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: -1;
+}
+
+/* Hover State */
+.service-list-item:hover {
+    opacity: 1 !important; /* Override old hover opacity */
+}
+
+.service-list-item:hover::before {
+    transform: scaleX(1);
+}
+
+.service-list-item:hover .service-list-content h3,
+.service-list-item:hover .service-list-content p,
+.service-list-item:hover .service-list-icon i {
+    color: #fff !important;
+}
+
+.service-list-item:hover .service-list-content {
+    transform: translateX(20px);
+}
+
+.service-list-icon i {
+    font-size: 1.5rem;
+}
+.service-list-item:hover .service-list-icon i {
+    transform: translateX(-10px) scale(1.3);
+}
