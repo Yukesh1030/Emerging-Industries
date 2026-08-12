@@ -94,14 +94,14 @@ button {
 .btn-login {
     background-color: var(--orange);
     color: #FFF;
-    padding: 8px 20px;
+    padding: 12px 28px;
 }
 
 .btn-join {
     background-color: #FFF;
     color: var(--text-dark);
-    padding: 8px 20px;
-    border-radius: 20px;
+    padding: 12px 28px;
+    border-radius: 25px;
     margin-left: 10px;
 }
 
@@ -148,7 +148,7 @@ button {
 }
 
 .logo-icon {
-    max-height: 60px;
+    max-height: 80px;
     width: auto;
 }
 
@@ -161,6 +161,7 @@ button {
     color: #FFF;
     font-weight: 500;
     font-size: 0.95rem;
+    text-transform: capitalize;
 }
 
 .nav-links a.active, .nav-links a:hover {
@@ -1584,8 +1585,10 @@ select.auth-input-select option {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 10vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 0;
     font-family: var(--font-body);
 }
 
@@ -1594,6 +1597,10 @@ select.auth-input-select option {
     margin: 0 auto;
     width: 100%;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-hero-content h1 {
@@ -1607,9 +1614,9 @@ select.auth-input-select option {
 
 .about-hero-bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -1652,10 +1659,12 @@ select.auth-input-select option {
 }
 
 .about-hero-text {
-    max-width: 450px;
+    max-width: 800px;
     color: #fff;
     font-size: 1rem;
     line-height: 1.6;
+    text-align: center;
+    order: -1;
 }
 
 /* 2. STATS SECTION */
@@ -3303,3 +3312,5 @@ html, body {
     font-variant-numeric: tabular-nums;
     letter-spacing: 0.05em;
 }
+
+
