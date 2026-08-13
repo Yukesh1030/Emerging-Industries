@@ -37,23 +37,49 @@ gsap.from(".articles-grid .article-card", {
     ease: "power2.out"
 });
 
-// GSAP animation for Blog Hero Section
-if (document.querySelector(".page-hero h1")) {
-    gsap.from(".page-hero h1", {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        delay: 0.2
-    });
-    gsap.from(".page-hero p", {
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        delay: 0.4
-    });
-}
+// Attractive GSAP animation for all Hero Headings
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof gsap !== 'undefined') {
+        const heroSelectors = ['.hero-text h1', '.gsap-hero-title', '.auth-huge-title', '.page-hero h1', 'header h1', '.hero h1'];
+        let heroH1s = [];
+        heroSelectors.forEach(sel => {
+            const els = document.querySelectorAll(sel);
+            els.forEach(el => {
+                if(!heroH1s.includes(el)) heroH1s.push(el);
+            });
+        });
+        
+        if (heroH1s.length === 0) {
+            const firstH1 = document.querySelector('h1');
+            if (firstH1) heroH1s.push(firstH1);
+        }
+
+        heroH1s.forEach(h1 => {
+            gsap.set(h1, { transformPerspective: 800 });
+            gsap.from(h1, {
+                duration: 1.8,
+                y: 80,
+                scale: 0.85,
+                rotationX: -60,
+                opacity: 0,
+                transformOrigin: "50% 50% -50px",
+                ease: "elastic.out(1, 0.4)",
+                delay: 0
+            });
+        });
+
+        // Retain the paragraph animation for page-hero
+        if (document.querySelector(".page-hero p")) {
+            gsap.from(".page-hero p", {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                delay: 0.4
+            });
+        }
+    }
+});
 
 // GSAP animation for Featured Article
 if (document.querySelector(".featured-article-container")) {

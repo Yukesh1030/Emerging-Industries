@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -290,6 +290,7 @@
                         <a href="404.html" class="social-icon"><img src="assets/streamline-logos_youtube-clip-logo-solid.webp" alt="YouTube" style="width: 32px; height: 32px; filter: brightness(0) invert(1);"></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>
@@ -303,11 +304,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             AOS.init({ once: true, offset: 50 });
             
-            // Hero GSAP Animations
-            gsap.from(".gsap-hero-title", { y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.2 });
+            // Hero GSAP Animations handled globally in script.js
         });
     </script>
 </body>
 </html>
-
-

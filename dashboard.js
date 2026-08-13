@@ -187,6 +187,35 @@ document.addEventListener('DOMContentLoaded', () => {
             stagger: 0.1,
             ease: "power2.out"
         });
+
+        // Attractive GSAP animation for Dashboard Hero Headings
+        const heroSelectors = ['.dashboard-header h1', 'h1'];
+        let heroH1s = [];
+        heroSelectors.forEach(sel => {
+            const els = document.querySelectorAll(sel);
+            els.forEach(el => {
+                if(!heroH1s.includes(el)) heroH1s.push(el);
+            });
+        });
+        
+        if (heroH1s.length === 0) {
+            const firstH1 = document.querySelector('h1');
+            if (firstH1) heroH1s.push(firstH1);
+        }
+
+        heroH1s.forEach(h1 => {
+            gsap.set(h1, { transformPerspective: 800 });
+            gsap.from(h1, {
+                duration: 1.8,
+                y: 80,
+                scale: 0.85,
+                rotationX: -60,
+                opacity: 0,
+                transformOrigin: "50% 50% -50px",
+                ease: "elastic.out(1, 0.4)",
+                delay: 0.1
+            });
+        });
     }
 });
 
