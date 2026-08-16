@@ -350,3 +350,34 @@ if (document.querySelector(".quality-section") && typeof gsap !== 'undefined') {
         }
     });
 }
+
+// GSAP Animation for About Stats Section
+if (document.querySelector(".about-stats-section") && typeof gsap !== 'undefined') {
+    const aboutStatsTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".about-stats-section",
+            start: "top 75%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    aboutStatsTl.from(".about-stats-section .stat-block", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out"
+    });
+    
+    // Parallax effect on the background image
+    gsap.to(".about-stats-section", {
+        backgroundPosition: "50% 100%",
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".about-stats-section",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+}
