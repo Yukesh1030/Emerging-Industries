@@ -314,3 +314,39 @@ const counterObserver = new IntersectionObserver((entries, observer) => {
 counters.forEach(counter => {
     counterObserver.observe(counter);
 });
+
+// GSAP Animation for Exceptional Quality Section
+if (document.querySelector(".quality-section") && typeof gsap !== 'undefined') {
+    const qualityTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".quality-section",
+            start: "top 75%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    qualityTl.from(".quality-header h2", {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out"
+    })
+    .from(".quality-header p", {
+        x: 50,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out"
+    }, "-=0.8");
+    
+    // Parallax effect on the background image
+    gsap.to(".quality-section", {
+        backgroundPosition: "50% 100%",
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".quality-section",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+}

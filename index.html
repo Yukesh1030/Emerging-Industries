@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -135,14 +135,12 @@
     </section>
 
     <!-- Exceptional Quality Section -->
-    <section class="quality-section" data-aos="fade-up">
-        <div class="container">
+    <section class="quality-section" style="background-image: url('assets/unsplash_fZEC4pR4Kpo.webp');">
+        <div class="quality-overlay"></div>
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="quality-header">
                 <h2>Exceptional quality<br>that can't be beaten</h2>
                 <p>Equipped with cutting-edge heavy machinery and automated robotic assembly lines, our manufacturing floor is optimized for large-scale industrial output. We continuously invest in modern technology to reduce waste and improve production speed without sacrificing quality.</p>
-            </div>
-            <div class="quality-image" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/unsplash_fZEC4pR4Kpo.webp" alt="Factory Interior" onerror="this.src='assets/image 104.webp'">
             </div>
         </div>
     </section>
@@ -213,59 +211,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section-new" data-aos="fade-up">
-        <div class="container contact-grid-new">
-            <div class="contact-left">
-                <div class="contact-form-box">
-                    <form class="contact-cyan-form" onsubmit="event.preventDefault(); window.location.href='404.html';">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Full name</label>
-                                <input type="text" placeholder="John Carter" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email address</label>
-                                <input type="email" placeholder="example@youremail.com" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Phone number</label>
-                                <input type="text" placeholder="+91 70107 92745" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Subject</label>
-                                <input type="text" placeholder="ex. Metal testing" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Message</label>
-                            <input type="text" placeholder="Write your message here ..." required>
-                        </div>
-                        <button type="submit" class="btn-submit-orange">Send Message</button>
-                    </form>
-                </div>
-            </div>
-            <div class="contact-right">
-                <div class="contact-right-content">
-                    <h2>Contact us to<br>request a quote</h2>
-                    <p class="contact-desc">Ready to start your next manufacturing project? Get in touch with our team of experts to discuss custom solutions, request a quote, or schedule a tour of our facilities.</p>
-                    <div class="contact-details">
-                        <div class="contact-detail-item">
-                            <h4><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> Contact us</h4>
-                            <p>Email: info@thestackly.com</p>
-                            <p>Phone: +91 70107 92745</p>
-                        </div>
-                        <div class="contact-detail-item">
-                            <h4><i class="fa-solid fa-thumbtack" style="color: #ff3333; margin-right: 8px; transform: rotate(45deg);"></i> Our location</h4>
-                            <p>MMR Complex, Chinna Thirupathi,<br>Salem, Tamil Nadu 636008</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Safety Standards Section (New) -->
     <section class="container section-padding safety-section" data-aos="fade-up">
@@ -310,6 +256,74 @@
             <button class="btn-primary" style="font-family: var(--font-heading); border-radius: 4px;" onclick="window.location.href='404.html'">Read Full Story</button>
         </div>
     </section>
+
+
+    <!-- Modern Premium Contact Section -->
+    <section class="contact-section-premium" id="contact">
+        <!-- Abstract Background Elements -->
+        <div class="contact-bg-glow glow-1"></div>
+        <div class="contact-bg-glow glow-2"></div>
+        
+        <div class="container contact-grid-premium">
+            <div class="contact-right-premium" data-aos="fade-right" data-aos-duration="1000">
+                <h2>Ready to elevate your<br><span class="highlight-cyan">manufacturing?</span></h2>
+                <p class="contact-desc">Get in touch with our team of experts to discuss custom solutions, request a quote, or schedule a tour of our state-of-the-art facilities.</p>
+                <div class="contact-details-premium">
+                    <div class="contact-detail-card">
+                        <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="detail-text">
+                            <h4>Contact us</h4>
+                            <p>info@thestackly.com<br>+91 70107 92745</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-card">
+                        <div class="detail-icon icon-red"><i class="fa-solid fa-thumbtack" style="transform: rotate(45deg);"></i></div>
+                        <div class="detail-text">
+                            <h4>Our location</h4>
+                            <p>MMR Complex, Chinna Thirupathi,<br>Salem, Tamil Nadu 636008</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-left-premium" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="glass-form-box">
+                    <h3>Send us a message</h3>
+                    <form class="premium-form" onsubmit="event.preventDefault(); window.location.href='404.html';">
+                        <div class="form-row">
+                            <div class="form-group-modern">
+                                <input type="text" id="fname" required>
+                                <label for="fname">Full name</label>
+                            </div>
+                            <div class="form-group-modern">
+                                <input type="email" id="femail" required>
+                                <label for="femail">Email address</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group-modern">
+                                <input type="text" id="fphone" required>
+                                <label for="fphone">Phone number</label>
+                            </div>
+                            <div class="form-group-modern">
+                                <input type="text" id="fsubject" required>
+                                <label for="fsubject">Subject</label>
+                            </div>
+                        </div>
+                        <div class="form-group-modern form-group-textarea">
+                            <textarea id="fmessage" required rows="3"></textarea>
+                            <label for="fmessage">Write your message here ...</label>
+                        </div>
+                        <button type="submit" class="btn-glow-cyan">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="footer-new">

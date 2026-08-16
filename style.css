@@ -414,31 +414,38 @@ button {
 
 /* Exceptional Quality Section */
 .quality-section {
-    padding: 6rem 0 0;
-    background-color: #FFF;
+    padding: 8rem 0;
+    background-color: #111;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #FFF;
+}
+.quality-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 .quality-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    margin-bottom: 4rem;
-    align-items: flex-end;
+    align-items: center;
 }
 .quality-header h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: #FFF;
 }
 .quality-header p {
     font-size: 1.05rem;
-    color: #555;
+    color: #DDD;
     text-align: right;
     max-width: 500px;
     margin-left: auto;
-}
-.quality-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-    display: block;
 }
 
 /* CTA Cyan Banner */
@@ -3394,3 +3401,248 @@ html, body {
     transform: translateX(-10px) scale(1.3);
 }
 
+
+/* ========================================================= */
+/* PREMIUM CONTACT SECTION REDESIGN */
+/* ========================================================= */
+.contact-section-premium {
+    position: relative;
+    background: #040814; 
+    padding: 8rem 0;
+    overflow: hidden;
+    color: #FFF;
+    font-family: var(--font-body);
+}
+
+.contact-bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(28, 196, 223, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(40px);
+}
+.contact-bg-glow.glow-1 {
+    top: -100px;
+    left: -200px;
+}
+.contact-bg-glow.glow-2 {
+    bottom: -200px;
+    right: -100px;
+    background: radial-gradient(circle, rgba(23, 84, 138, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.contact-grid-premium {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-right-premium h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.highlight-cyan {
+    color: #1CC4DF;
+    background: linear-gradient(90deg, #1CC4DF, #42f5d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-right-premium .contact-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 90%;
+}
+
+.contact-details-premium {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-detail-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-detail-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+    border-color: rgba(28, 196, 223, 0.3);
+}
+
+.detail-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(28, 196, 223, 0.1);
+    color: #1CC4DF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+.detail-icon.icon-red {
+    background: rgba(255, 51, 51, 0.1);
+    color: #ff3333;
+}
+
+.detail-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.detail-text p {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Glass Form Box */
+.glass-form-box {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 3.5rem;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.glass-form-box h3 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-heading);
+    color: #FFF;
+}
+
+.premium-form .form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.premium-form .form-group-modern {
+    position: relative;
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-modern input,
+.form-group-modern textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.2rem;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+}
+
+.form-group-modern textarea {
+    resize: none;
+    height: 120px;
+}
+
+.form-group-modern input:focus,
+.form-group-modern textarea:focus {
+    outline: none;
+    border-color: #1CC4DF;
+    background: rgba(28, 196, 223, 0.05);
+    box-shadow: 0 0 15px rgba(28, 196, 223, 0.1);
+}
+
+.form-group-modern label {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-group-modern.form-group-textarea label {
+    top: 1.5rem;
+    transform: none;
+}
+
+.form-group-modern input:focus ~ label,
+.form-group-modern input:valid ~ label,
+.form-group-modern textarea:focus ~ label,
+.form-group-modern textarea:valid ~ label {
+    top: -0.6rem;
+    left: 0.8rem;
+    transform: translateY(0);
+    font-size: 0.8rem;
+    background: #0a1122;
+    padding: 0 0.5rem;
+    color: #1CC4DF;
+    border-radius: 4px;
+}
+
+.btn-glow-cyan {
+    width: 100%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #1CC4DF, #17548A);
+    color: #FFF;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(28, 196, 223, 0.2);
+    margin-top: 1rem;
+}
+
+.btn-glow-cyan:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(28, 196, 223, 0.4);
+    background: linear-gradient(90deg, #24d2ed, #1e6ba6);
+}
+
+@media (max-width: 992px) {
+    .contact-grid-premium {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .contact-right-premium h2 {
+        font-size: 2.5rem;
+    }
+    .glass-form-box {
+        padding: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .premium-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
