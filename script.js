@@ -381,3 +381,27 @@ if (document.querySelector(".about-stats-section") && typeof gsap !== 'undefined
         }
     });
 }
+
+// GSAP Hover Effects for Cards
+if (typeof gsap !== 'undefined') {
+    const hoverCards = document.querySelectorAll('.gsap-hover-card');
+    hoverCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            gsap.to(card, {
+                y: -10,
+                scale: 1.03,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, {
+                y: 0,
+                scale: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+    });
+}
