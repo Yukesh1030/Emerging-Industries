@@ -786,7 +786,7 @@ button {
 
 .footer-heading-small {
     font-size: 1.1rem;
-    text-align: right;
+    text-align: center;
 }
 
 .links-columns {
@@ -811,13 +811,13 @@ button {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
     line-height: 1.6;
-    text-align: right;
+    text-align: center;
 }
 
 .footer-form {
     display: flex;
     margin-bottom: 3rem;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .footer-form input {
@@ -2289,7 +2289,8 @@ select.auth-input-select option {
         padding: 0 15px;
     }
 }
-/* Quality Assurance Card (Bottom Paragraph) */
+
+/* Quality Assurance Card (Bottom Paragraph) */
 .qa-highlight-card {
     display: flex;
     background: #fff;
