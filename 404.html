@@ -1,82 +1,315 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found - EMERGE-X</title>
-    <link rel="stylesheet" href="style.css?v=2.1">
+    <title>404 Not Found - Emerging Industries</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2.2">
     <style>
         body {
-            background-color: var(--bg-main);
-            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--navy);
+            color: var(--text-light);
+            font-family: var(--font-body);
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            text-align: center;
-            font-family: 'Outfit', sans-serif;
-            margin: 0;
-            overflow: hidden;
+            position: relative;
         }
+
+        /* Animated Background Elements */
+        .bg-glow-1, .bg-glow-2, .bg-glow-3 {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            z-index: 0;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+
+        .bg-glow-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 102, 0, 0.4);
+            top: -100px;
+            left: -100px;
+            animation-duration: 12s;
+        }
+
+        .bg-glow-2 {
+            width: 500px;
+            height: 500px;
+            background: rgba(91, 192, 190, 0.3);
+            bottom: -150px;
+            right: -100px;
+            animation-duration: 15s;
+            animation-direction: alternate-reverse;
+        }
+        
+        .bg-glow-3 {
+            width: 300px;
+            height: 300px;
+            background: rgba(28, 37, 65, 0.6);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-duration: 8s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, 50px) scale(1.1); }
+            100% { transform: translate(-30px, -20px) scale(0.9); }
+        }
+
+        /* Container */
         .error-container {
-            max-width: 600px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 1s ease-out;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 700px;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.05);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        h1 {
-            font-size: 6rem;
-            color: var(--accent);
+
+        /* Glitch Effect for 404 */
+        .error-code {
+            font-size: 10rem;
+            font-weight: 800;
             margin: 0;
             line-height: 1;
-            font-weight: 800;
-        }
-        h2 {
-            font-size: 2rem;
-            margin: 20px 0;
-            font-weight: 600;
-        }
-        p {
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .back-btn {
+            background: linear-gradient(135deg, var(--orange), #FF9933);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
             display: inline-block;
-            background: linear-gradient(135deg, var(--accent), #1a9658);
-            color: #0b1514;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            animation: pulseText 3s infinite alternate;
         }
-        .back-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(39, 209, 127, 0.3);
+
+        .error-code::before, .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--orange), #FF9933);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        
+        .error-code::before {
+            animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
+        }
+        
+        .error-code::after {
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim-1 {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        
+        @keyframes glitch-anim-2 {
+            0% { transform: translate(0); }
+            20% { transform: translate(2px, -2px); }
+            40% { transform: translate(2px, 2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(-2px, 2px); }
+            100% { transform: translate(0); }
+        }
+
+        @keyframes pulseText {
+            0% { filter: drop-shadow(0 0 10px rgba(255, 102, 0, 0.3)); }
+            100% { filter: drop-shadow(0 0 25px rgba(255, 102, 0, 0.6)); }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin: 10px 0 20px;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fadeInText 1s 0.3s forwards;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            animation: fadeInText 1s 0.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            to { opacity: 1; }
+        }
+
+        /* Interactive Buttons */
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeInText 1s 0.7s forwards;
+        }
+
+        .btn-primary-404 {
+            padding: 15px 35px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-hover));
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+
+        .btn-primary-404::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary-404:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 25px rgba(255, 102, 0, 0.4);
+            color: white;
+        }
+
+        .btn-primary-404:hover::before {
+            left: 100%;
+        }
+
+        .btn-outline-404 {
+            padding: 15px 35px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.4s ease;
+        }
+
+        .btn-outline-404:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+            transform: translateY(-5px);
+            background: rgba(91, 192, 190, 0.05);
+        }
+        
+        .btn-primary-404 i, .btn-outline-404 i {
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-primary-404:hover i {
+            transform: translateX(3px);
+        }
+        
+        .btn-outline-404:hover i {
+            transform: translateX(-3px);
+        }
+
+        /* Mouse tracker for 3D effect */
+        @media (min-width: 768px) {
+            .error-container {
+                transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="error-container">
-        <h1>404</h1>
-        <h2>Page Not Found</h2>
-        <p>The feature or page you are looking for is currently under construction or does not exist.</p>
-        <div style="display: flex; gap: 16px; justify-content: center; margin-top: 20px;">
-            <a href="javascript:history.back()" class="back-btn" style="background: transparent; border: 1px solid var(--accent); color: var(--accent);">Go Back</a>
-            <a href="index.html" class="back-btn">Back to Home</a>
+    <!-- Background Animations -->
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+    <div class="bg-glow-3"></div>
+
+    <!-- Main Content -->
+    <div class="error-container" id="errorContainer">
+        <h1 class="error-code">404</h1>
+        <h2>Oops! Page Not Found</h2>
+        <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back on track.</p>
+        
+        <div class="btn-group">
+            <a href="javascript:history.back()" class="btn-outline-404">
+                <i class="fa-solid fa-arrow-left"></i> Go Back
+            </a>
+            <a href="index.html" class="btn-primary-404">
+                Back to Home <i class="fa-solid fa-house"></i>
+            </a>
         </div>
     </div>
+
+    <script>
+        // Optional 3D Tilt Effect on mousemove for desktop
+        const container = document.getElementById('errorContainer');
+        
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            document.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
+                
+                // Add the slideUp completion offset to not jump on first move
+                container.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateY(0)`;
+            });
+            
+            // Reset on mouse leave
+            document.addEventListener('mouseleave', () => {
+                container.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0)`;
+                container.style.transition = 'transform 0.5s ease';
+                setTimeout(() => {
+                    container.style.transition = 'transform 0.1s ease-out, box-shadow 0.1s ease-out';
+                }, 500);
+            });
+        }
+    </script>
 </body>
 </html>
-
-
