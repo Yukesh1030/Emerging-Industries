@@ -3368,9 +3368,9 @@ html, body {
 }
 .locations-grid-new {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
-    text-align: center;
+    text-align: left;
 }
 .emergency-section-new {
     margin-top: 5rem;
