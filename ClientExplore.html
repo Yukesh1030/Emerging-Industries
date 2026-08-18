@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -132,14 +132,14 @@
             </div>
         </div>
 
-        <!-- 2. Global Market Map -->
+        <!-- 2. Global Market Share -->
         <div class="charts-grid" style="margin-top: 32px;" data-aos="fade-up">
             <div class="chart-card full-width gsap-stagger">
                 <div class="chart-header">
-                    <h3>Global Market Heatmap</h3>
+                    <h3>Global Market Share</h3>
                 </div>
-                <div style="height: 200px; display:flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed rgba(255,255,255,0.1);">
-                    <span style="color:var(--text-muted);">[Interactive Map Rendered Here]</span>
+                <div style="height: 350px; position: relative; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); padding: 20px;">
+                    <canvas id="marketPieChart"></canvas>
                 </div>
             </div>
         </div>
@@ -198,7 +198,51 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('marketPieChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['North America', 'Europe', 'Asia Pacific', 'Rest of World'],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: [
+                            '#1CC4DF',
+                            '#FF6600',
+                            '#00FF88',
+                            '#666666'
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#A0AEC0',
+                                font: {
+                                    family: "'Outfit', sans-serif",
+                                    size: 14
+                                },
+                                padding: 20
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 

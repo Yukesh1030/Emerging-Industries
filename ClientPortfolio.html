@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -146,8 +146,8 @@
                 <div class="chart-header">
                     <h3>Performance vs S&P 500</h3>
                 </div>
-                <div style="height: 150px; display:flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed rgba(255,255,255,0.1);">
-                    <span style="color:var(--text-muted);">[Comparison Chart Rendered Here]</span>
+                <div style="height: 350px; position: relative; background: rgba(255,255,255,0.02); border-radius: 12px; padding: 20px; border: 1px solid rgba(255,255,255,0.05);">
+                    <canvas id="performanceChart"></canvas>
                 </div>
             </div>
         </div>
@@ -156,7 +156,84 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            
+            // Gradient for Portfolio line
+            let gradientPortfolio = ctx.createLinearGradient(0, 0, 0, 300);
+            gradientPortfolio.addColorStop(0, 'rgba(28, 196, 223, 0.4)');
+            gradientPortfolio.addColorStop(1, 'rgba(28, 196, 223, 0.0)');
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                    datasets: [
+                        {
+                            label: 'Your Portfolio',
+                            data: [10000, 10500, 10200, 11000, 11800, 11500, 12200, 13150],
+                            borderColor: '#1CC4DF',
+                            backgroundColor: gradientPortfolio,
+                            borderWidth: 3,
+                            pointBackgroundColor: '#1CC4DF',
+                            pointBorderColor: '#fff',
+                            pointRadius: 4,
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'S&P 500',
+                            data: [10000, 10200, 10100, 10400, 10600, 10800, 11100, 11300],
+                            borderColor: '#FF6600',
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            pointRadius: 0,
+                            fill: false,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#A0AEC0',
+                                font: {
+                                    family: "'Outfit', sans-serif"
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: '#A0AEC0',
+                                callback: function(value) {
+                                    return '$' + value.toLocaleString();
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: '#A0AEC0'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
