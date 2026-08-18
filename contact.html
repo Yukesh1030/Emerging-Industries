@@ -12,6 +12,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css?v=2.1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar navbar-transparent">
@@ -160,41 +162,49 @@
                     Find quick answers to common questions about our capabilities,<br>international shipping processes, and consultation services.
                 </p>
             </div>
-            <div class="faq-list" style="display: flex; flex-direction: column;">
-                <!-- FAQ Item 1 -->
-                <div class="gsap-faq-item faq-item-new">
-                    <div style="flex: 1; padding-right: 2rem;">
-                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #000; line-height: 1.4;">Do you offer international shipping<br>for metallurgical products?</h4>
-                    </div>
-                    <div style="flex: 1; display: flex; align-items: center;">
-                        <p style="font-size: 0.95rem; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; line-height: 1.6; margin: 0;">Mattis elit aliquet pellentesque aliquet et adipiscing semper ut<br>pharetra pellentesque ut mauris massa erat eget nunc nibh nunc.</p>
-                    </div>
-                </div>
-                <!-- FAQ Item 2 -->
-                <div class="gsap-faq-item faq-item-new">
-                    <div style="flex: 1; padding-right: 2rem;">
-                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #000; line-height: 1.4;">How can I learn more about<br>Industrial X sustainability efforts?</h4>
-                    </div>
-                    <div style="flex: 1; display: flex; align-items: center;">
-                        <p style="font-size: 0.95rem; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; line-height: 1.6; margin: 0;">A mauris mauris facilisi morbi dui lobortis sed malesuada quam<br>ultrices vitae augue imperdiet pellentesque aliquam mi cursus sit.</p>
+            <div class="modern-faq-container">
+                <div class="modern-faq-item">
+                    <button class="modern-faq-question">
+                        <span>Do you offer international shipping for metallurgical products?</span>
+                        <div class="faq-icon-box">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="modern-faq-answer">
+                        <p>Mattis elit aliquet pellentesque aliquet et adipiscing semper ut pharetra pellentesque ut mauris massa erat eget nunc nibh nunc.</p>
                     </div>
                 </div>
-                <!-- FAQ Item 3 -->
-                <div class="gsap-faq-item faq-item-new">
-                    <div style="flex: 1; padding-right: 2rem;">
-                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #000; line-height: 1.4;">Can I schedule a facility tour or<br>arrange a meeting with your team?</h4>
-                    </div>
-                    <div style="flex: 1; display: flex; align-items: center;">
-                        <p style="font-size: 0.95rem; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; line-height: 1.6; margin: 0;">Nunc adipiscing fames est elementum ac sem donec enim<br>lectus vitae sed in dolor cursus porta id elit lectus tincidunt</p>
+                <div class="modern-faq-item">
+                    <button class="modern-faq-question">
+                        <span>How can I learn more about Industrial X sustainability efforts?</span>
+                        <div class="faq-icon-box">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="modern-faq-answer">
+                        <p>A mauris mauris facilisi morbi dui lobortis sed malesuada quam ultrices vitae augue imperdiet pellentesque aliquam mi cursus sit.</p>
                     </div>
                 </div>
-                <!-- FAQ Item 4 -->
-                <div class="gsap-faq-item faq-item-new">
-                    <div style="flex: 1; padding-right: 2rem;">
-                        <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #000; line-height: 1.4;">Do you provide metallurgy<br>consulting services?</h4>
+                <div class="modern-faq-item">
+                    <button class="modern-faq-question">
+                        <span>Can I schedule a facility tour or arrange a meeting with your team?</span>
+                        <div class="faq-icon-box">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="modern-faq-answer">
+                        <p>Nunc adipiscing fames est elementum ac sem donec enim lectus vitae sed in dolor cursus porta id elit lectus tincidunt</p>
                     </div>
-                    <div style="flex: 1; display: flex; align-items: center;">
-                        <p style="font-size: 0.95rem; color: #000; font-family: 'Josefin Sans', sans-serif; font-weight: 600; line-height: 1.6; margin: 0;">Mattis elit aliquet pellentesque aliquet et adipiscing semper ut<br>pharetra pellentesque ut mauris massa erat eget nunc nibh nunc.</p>
+                </div>
+                <div class="modern-faq-item">
+                    <button class="modern-faq-question">
+                        <span>Do you provide metallurgy consulting services?</span>
+                        <div class="faq-icon-box">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="modern-faq-answer">
+                        <p>Mattis elit aliquet pellentesque aliquet et adipiscing semper ut pharetra pellentesque ut mauris massa erat eget nunc nibh nunc.</p>
                     </div>
                 </div>
             </div>
@@ -367,6 +377,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.modern-faq-item');
+            faqItems.forEach(item => {
+                const questionBtn = item.querySelector('.modern-faq-question');
+                const toggleAccordion = (e) => {
+                    const isActive = item.classList.contains('active');
+                    if (!isActive) {
+                        // Close all others
+                        faqItems.forEach(otherItem => {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.modern-faq-answer').style.maxHeight = null;
+                        });
+                        item.classList.add('active');
+                        const answer = item.querySelector('.modern-faq-answer');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    } else if (e && e.type === 'click') {
+                        // Allow clicking to close it
+                        item.classList.remove('active');
+                        item.querySelector('.modern-faq-answer').style.maxHeight = null;
+                    }
+                };
+                
+                questionBtn.addEventListener('click', toggleAccordion);
+                item.addEventListener('mouseenter', toggleAccordion);
+            });
+        });
+    </script>
 </body>
 </html>
 
