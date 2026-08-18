@@ -2186,7 +2186,6 @@ select.auth-input-select option {
     margin: 0 auto;
     padding: 0 2rem;
 }
-
 /* 2. METAL CRAFTING HEAD */
 .service-detail-head {
     padding: 6rem 0 3rem 0;
@@ -2194,24 +2193,73 @@ select.auth-input-select option {
     color: #000;
 }
 
-.service-detail-head h2 {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+.service-detail-head.metal-crafting-hero {
+    padding: 10rem 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
-.service-detail-head p {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 700px;
-    margin-bottom: 3rem;
-}
-
-.service-detail-head .service-large-img img {
+.metal-crafting-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: cover;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+.metal-crafting-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    max-width: 800px;
+    margin: 0; 
+}
+
+.metal-crafting-content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    font-family: var(--font-heading);
+    color: #fff;
+}
+
+.metal-crafting-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .service-detail-head.metal-crafting-hero {
+        padding: 6rem 0;
+        background-attachment: scroll;
+        min-height: 50vh;
+    }
+    
+    .metal-crafting-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .metal-crafting-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .metal-crafting-content p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
 }
 
 /* 3. FORM & ABOUT INFO */
